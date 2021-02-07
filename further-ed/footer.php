@@ -9,7 +9,7 @@
 */
 ?>
 </div>
- <!-- closing tag for site-content"> →
+ <!-- closing tag for site-content"> -->
 <footer></footer>
 <?php wp_footer(); ?>
 </body>

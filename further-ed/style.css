@@ -8,11 +8,118 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: further-education */
 
+
+ /* BASE COLOURS  */
 :root {
-  --green: #a4bc61;
-  --lightgreen: #c8dc8f;
-  --neutral: #eef4dd;
-  --white: #ffffff;
-  --blue: #034d61;
-  --grey-text: #505050;
+  --red: #ab3029;
+  --light-blue: #73a6bb;
+  --blue: #467297;
+  --dark: #2b2129;
+}
+
+
+/* BASE STYLING  */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5rem;
+  /* font-family: ; Monsterrat */
+}
+
+h1, h2, h3, h4 {
+  /* font-family: ; Century Gothic */
+  text-transform: uppercase;
+}
+
+/* h1 { font-size: ;}
+
+h2 { font-size: ;}
+
+h3 { font-size: ;}
+
+h4 { font-size: ;} */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+a:hover, a:active {
+
+}
+
+
+/* HELPER CLASSES  */
+
+/* used on a container where the contents are ALWAYS to be flexed */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* used on a container that should not stretch beyond the max-width */
+.max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* used to center text */
+.text-center { text-align: center; }
+
+/* base button styling */
+.btn {
+
+}
+
+.btn:hover {
+
+}
+
+/* styling for call to action buttons */
+.btn-action {
+
+}
+
+
+
+/* **** HEADER ****  */
+
+
+
+/* **** HOMEPAGE ****  */
+
+
+
+/* **** FOOTER ****  */
+
+
+
+ /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
+
+
+
+
+
+
+
+
+/* **** MEDIA QUERIES ****  */
+
+/* tablet size  */
+@media(min-width:800px) {
+
+}
+
+/* desktop version  */
+@media(min-width: 1000px) {
+
 }
