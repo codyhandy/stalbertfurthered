@@ -21,11 +21,13 @@ Text Domain: further-education */
 /* BASE STYLING  */
 html {
   font-size: 62.5%;
+  margin: 0;
 }
 
 body {
   font-size: 1.6rem;
   line-height: 1.5rem;
+  margin: 0;
   /* font-family: ; Monsterrat */
 }
 
@@ -48,9 +50,15 @@ ul {
   padding: 0;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 a {
   text-decoration: none;
   display: block;
+  color: #000;
 }
 
 a:hover, a:active {
@@ -64,6 +72,7 @@ a:hover, a:active {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* used on a container that should not stretch beyond the max-width */
@@ -92,7 +101,54 @@ a:hover, a:active {
 
 
 /* **** HEADER ****  */
+nav {
+  padding: 2rem;
+}
 
+.logo img {
+  width: 10rem;
+}
+
+.mobile-btn {
+  cursor: pointer;
+  padding: 1rem;
+  
+}
+
+.mobile-btn {
+  fill: var(--blue);
+}
+
+.main-menu li a {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #000;
+}
+
+.main-menu {
+  background-color: var(--light-blue);
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: -25rem;
+  width: 25rem;
+  overflow-x: hidden;
+  transition: 0.75s;
+  text-transform: uppercase;
+  padding-top: 5rem;
+}
+
+.show-nav {
+  left: 0;
+}
+
+ /* might add this later to darken everything that is behind the mobile nav  */
+.nav-darken {
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
 
 
 /* **** HOMEPAGE ****  */
@@ -116,6 +172,30 @@ a:hover, a:active {
 
 /* tablet size  */
 @media(min-width:800px) {
+  /* HEADER  */
+  .mobile-btn {
+    display: none;
+  }
+
+  .menu-main-menu-container {
+    width: 70%;
+  }
+
+  .main-menu {
+    position: static;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0;
+  }
+
+  .main-menu li a {
+    border: none;
+  }
+
 
 }
 

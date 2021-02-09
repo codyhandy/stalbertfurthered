@@ -1,9 +1,12 @@
 // mobile toggle button
 let mobileBtn = document.querySelector('.mobile-btn');
-let nav = document.querySelector('header nav');
+let nav = document.querySelector('.main-menu');
+
+console.log('js has been loaded');
 
 mobileBtn.addEventListener('click', () => {
-    nav.classList.toggle('show');
+    console.log('menu button has been clicked')
+    nav.classList.toggle('show-nav');
 });
 
 
