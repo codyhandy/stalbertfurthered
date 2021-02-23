@@ -16,7 +16,7 @@
  </head>
  <body <?php body_class(); ?> >
     <header>
-        <nav class="flex">
+        <nav class="flex max-width">
             <div class="logo">
             <!-- this function displays the logo that is defined within the wordpress admin panel  -->
                 <?php if ( ! has_custom_logo() ) { ?>
