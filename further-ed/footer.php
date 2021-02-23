@@ -9,8 +9,12 @@
 */
 ?>
 </div>
- <!-- closing tag for site-content"> -->
-<footer></footer>
-<?php wp_footer(); ?>
+ <!-- closing tag for site-content"> →
+<footer>
+
+<?php get_template_part( 'template-parts/sidebar', 'footer' ); ?>
+
+
+</footer>
 </body>
 </html>
