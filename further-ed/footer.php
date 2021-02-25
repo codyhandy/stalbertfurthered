@@ -9,7 +9,7 @@
 */
 ?>
 </div>
- <!-- closing tag for site-content"> →
+ <!-- closing tag for site-content"> -->
 <footer>
 
 <?php get_template_part( 'template-parts/sidebar', 'footer' ); ?>
