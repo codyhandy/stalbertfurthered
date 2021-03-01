@@ -13,14 +13,14 @@
         //creates the query to fetch the services
         //parameters display the latest services.
         $args = array(
-            'post_type' => 'service',
+            'post_type' => 'single-service',
             'posts_per_page' => 3,
             'orderby' => 'date', 
             'order' => 'ASC' 
 
         );
         //new WP_Query object saved as the variable $the_query.
-        $the_produce_query = new WP_Query( $args );
+        $the_service_query = new WP_Query( $args );
     ?>
 
     <section class="section1 max-width">
@@ -54,6 +54,32 @@
             ?>
                 <button class="btn"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
                 <?php endif; ?>  
+        </div>
+    </section>
+
+    <section>
+        <div class="max-width">
+            <h2><?php $headingServices = get_field( 'heading-services' ); ?> <?php if($headingServices) {_e($headingServices);} ?></h2>
+
+            <!-- loops through and displays posts from the "services categories" -->
+            <?php if ( $the_service_query->have_posts() ) : ?>
+            <div class="card-container">   
+                    <?php while ( $the_service_query->have_posts() ) : $the_service_query->the_post();?>
+                        <div class="card">
+                            <img src="<?php $serviceIcon = get_field( 'service-icon' ); ?> <?php if($serviceIcon) {_e($serviceIcon);} ?>" alt="">
+                            <h3><?php $serviceHeading = get_field( 'service-heading' ); ?> <?php if($serviceHeading) {_e($serviceHeading);} ?></h3>
+                            <button class="btn"><a href="<?php the_permalink(); ?>">View More</a></button>
+                        </div>
+                    <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+            </div> <!-- end of the card container -->
+        </div>
+    </section>
+
+    <section>
+        <div class="max-width">
+            <h2><?php $headingCourses = get_field( 'heading-courses' ); ?> <?php if($headingCourses) {_e($headingCourses);} ?></h2>
         </div>
     </section>
 
