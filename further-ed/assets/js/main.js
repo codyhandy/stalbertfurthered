@@ -1,4 +1,4 @@
-
+console.log('this is dumb');
 // mobile toggle button
 let mobileBtn = document.querySelector('.mobile-btn');
 let nav = document.querySelector('.main-menu');

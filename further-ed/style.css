@@ -8,8 +8,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: further-education */
 
-
- /* BASE COLOURS  */
+/* BASE COLOURS  */
 :root {
   --red: #ab3029;
   --light-blue: #73a6bb;
@@ -18,21 +17,46 @@ Text Domain: further-education */
   --off-white: #f3f8f6;
 }
 
-
 /* BASE STYLING  */
 html {
   font-size: 62.5%;
-  margin: 0;
+  margin: 0 !important;
 }
 
 body {
   font-size: 1.6rem;
-  /* line-height: 1.5rem; */
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5rem;
   margin: 0;
-  /* font-family: ; Monsterrat */
+  /* always keep the footer down */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
 }
 
-h1, h2, h3, h4 {
+/* typographical scales */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: clamp(4.2rem, 5vw, 10rem);
+  line-height: 4.8rem;
+}
+
+h2 {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 4.8rem;
+}
+h3 {
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  line-height: 4.8rem;
+}
+h4 {
   /* font-family: ; Century Gothic */
   text-transform: uppercase;
   margin: 1rem 0;
@@ -63,8 +87,8 @@ a {
   color: #000;
 }
 
-a:hover, a:active {
-
+a:hover,
+a:active {
 }
 
 section {
@@ -87,7 +111,22 @@ section {
 }
 
 /* used to center text */
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
+
+/* three column grid - responsive to screen sizes */
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
+}
+
+/* column padding for footer and other miscellaneous 3 column needs */
+.column {
+  padding: 2rem;
+  width: 95%;
+}
 
 /* base button styling */
 .btn {
@@ -111,24 +150,24 @@ section {
 
 /* styling for call to action buttons */
 .btn-action {
-
 }
 
-
-
 /* **** HEADER ****  */
+header {
+  background-color: var(--off-white);
+}
 nav {
   padding: 2rem;
+  background-color: var(--off-white);
 }
 
 .logo img {
-  width: 10rem;
+  width: 15rem;
 }
 
 .mobile-btn {
   cursor: pointer;
   padding: 1rem;
-  
 }
 
 .mobile-btn {
@@ -136,14 +175,19 @@ nav {
 }
 
 .main-menu li a {
-  text-align: center;
-  padding: 2rem 0;
-  font-size: 1.8rem;
-  border-bottom: 1px solid #000;
+  padding: 2rem;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  display: block;
+  color: var(--off-white);
+}
+
+.main-menu li a:active {
+  background-color: var(--blue);
 }
 
 .main-menu {
-  background-color: var(--light-blue);
+  background-color: var(--dark);
+  border-right: 2px solid var(--light-blue);
   height: 100%;
   position: fixed;
   z-index: 10;
@@ -160,12 +204,10 @@ nav {
   left: 0;
 }
 
- /* might add this later to darken everything that is behind the mobile nav  */
+/* might add this later to darken everything that is behind the mobile nav  */
 .nav-darken {
   background-color: rgba(0, 0, 0, 0.5);
-
 }
-
 
 /* **** HOMEPAGE ****  */
 section.featured {
@@ -177,52 +219,152 @@ section.featured {
   background-color: var(--off-white);
 }
 
+footer {
+  background-color: var(--dark);
+  color: var(--off-white);
+  padding-top: 2rem;
+}
 
-/* **** FOOTER ****  */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
 
+.menu-footer-menu-container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.menu-footer-menu-container .menu-item a {
+  color: var(--off-white);
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 3vw, 2rem);
+  line-height: 4.8rem;
+}
+.menu-footer-menu-container .menu-item a:hover {
+  color: var(--light-blue);
+  cursor: pointer;
+}
 
+footer .column:first-of-type img {
+  max-width: 30rem !important;
+  margin: 0 auto;
+}
 
- /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
+footer .column:nth-of-type(2) h3 {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
 
+footer .column:nth-of-type(2) {
+  max-width: 350px;
+}
 
+footer .column:nth-of-type(2) ul li ul li {
+  width: 30%;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
 
+footer .column:nth-of-type(2) ul li ul li:last-of-type {
+  text-align: right;
+  font-size: 1rem;
+}
 
-
-
-
+footer .column:nth-of-type(2) ul li hr {
+  width: 90%;
+  height: 3px;
+  background-color: var(--off-white);
+  text-align: center;
+}
+.footer-nav {
+  text-align: center;
+}
+/* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
-@media(min-width:800px) {
+@media (min-width: 800px) {
   /* HEADER  */
   .mobile-btn {
     display: none;
-  }
-
-  .menu-main-menu-container {
-    width: 70%;
   }
 
   .main-menu {
     position: static;
     width: 100%;
     max-width: 800px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 0;
+    background-color: var(--off-white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-right: none;
+    padding-top: 0;
   }
 
   .main-menu li a {
     border: none;
+    color: var(--dark);
+    padding: 2rem 0;
   }
 
+  .main-menu li:hover a {
+    color: var(--blue);
+    text-decoration: underline;
+    cursor: pointer;
+  }
 
+  .menu-main-menu-container {
+    width: 70%;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
+  .menu-footer-menu-container ul {
+    grid-template-columns: 1fr;
+    margin-top: -15rem;
+    margin-left: 5rem;
+  }
+  .footer-nav {
+    text-align: left;
+  }
 }
 
 /* desktop version  */
-@media(min-width: 1000px) {
+@media (min-width: 1000px) {
+  .main-menu {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    border-right: none;
+  }
 
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .column:nth-of-type(3) {
+    grid-column: 2 / span 2;
+    grid-row: 1;
+  }
+  footer .column:nth-of-type(2) {
+    grid-column: 4 / span 1;
+  }
+  .menu-footer-menu-container ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+}
+
+/* desktop version  */
+@media (min-width: 1400px) {
 }
