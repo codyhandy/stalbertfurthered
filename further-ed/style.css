@@ -44,8 +44,8 @@ h4 {
 }
 
 h1 {
-  font-size: clamp(4.2rem, 5vw, 10rem);
-  line-height: 4.8rem;
+  font-size: clamp(4.2rem, 5vw, 8rem);
+  line-height: 10rem;
 }
 
 h2 {
@@ -61,14 +61,6 @@ h4 {
   text-transform: uppercase;
   margin: 1rem 0;
 }
-
-/* h1 { font-size: ;}
-
-h2 { font-size: ;}
-
-h3 { font-size: ;}
-
-h4 { font-size: ;} */
 
 ul {
   list-style-type: none;
@@ -106,8 +98,9 @@ section {
 
 /* used on a container that should not stretch beyond the max-width */
 .max-width {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* used to center text */
@@ -128,7 +121,7 @@ section {
   width: 95%;
 }
 
-/* base button styling */
+/* BASE BUTTON STYLING */
 .btn {
   background-color: transparent;
   border: 2px solid var(--blue);
@@ -148,8 +141,29 @@ section {
   color: #fff;
 }
 
+.btn.inv {
+  border: 2px solid #fff;
+}
+
+.btn.inv a {
+  color: #fff;
+}
+
+.btn.inv:hover {
+  background-color: #fff;
+}
+
+.btn.inv:hover a {
+  color: var(--blue);
+}
+
 /* styling for call to action buttons */
 .btn-action {
+}
+
+/* BASE CARD STYLING */
+.card {
+  text-align: center;
 }
 
 /* **** HEADER ****  */
@@ -163,6 +177,7 @@ nav {
 
 .logo img {
   width: 15rem;
+  padding: 1rem 0;
 }
 
 .mobile-btn {
@@ -175,7 +190,7 @@ nav {
 }
 
 .main-menu li a {
-  padding: 2rem;
+  padding: 2rem 1rem;
   font-size: clamp(1.8rem, 3vw, 2rem);
   display: block;
   color: var(--off-white);
@@ -219,6 +234,7 @@ section.featured {
   background-color: var(--off-white);
 }
 
+ /* **** FOOTER ****  */
 footer {
   background-color: var(--dark);
   color: var(--off-white);
@@ -285,6 +301,8 @@ footer .column:nth-of-type(2) ul li hr {
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 
+
+
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
@@ -308,7 +326,6 @@ footer .column:nth-of-type(2) ul li hr {
   .main-menu li a {
     border: none;
     color: var(--dark);
-    padding: 2rem 0;
   }
 
   .main-menu li:hover a {
@@ -319,6 +336,15 @@ footer .column:nth-of-type(2) ul li hr {
 
   .menu-main-menu-container {
     width: 70%;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
   }
 
   .footer-grid {
@@ -337,7 +363,7 @@ footer .column:nth-of-type(2) ul li hr {
 }
 
 /* desktop version  */
-@media (min-width: 1000px) {
+@media (min-width: 1150px) {
   .main-menu {
     width: 100%;
     max-width: 800px;

@@ -52,7 +52,7 @@
                     $link_title = $linkFeatured['title'];
                     $link_url = $linkFeatured['url'];
             ?>
-                <button class="btn"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
+                <button class="btn inv"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
                 <?php endif; ?>  
         </div>
     </section>
@@ -66,7 +66,9 @@
             <div class="card-container">   
                     <?php while ( $the_service_query->have_posts() ) : $the_service_query->the_post();?>
                         <div class="card">
-                            <img src="<?php $serviceIcon = get_field( 'service-icon' ); ?> <?php if($serviceIcon) {_e($serviceIcon);} ?>" alt="">
+                            <?php if($serviceIcon = get_field( 'service-icon' )): ?>
+                                <img src="<?php if($serviceIcon) {_e($serviceIcon);} ?>" alt="">
+                            <?php endif; ?>
                             <h3><?php $serviceHeading = get_field( 'service-heading' ); ?> <?php if($serviceHeading) {_e($serviceHeading);} ?></h3>
                             <button class="btn"><a href="<?php the_permalink(); ?>">View More</a></button>
                         </div>
@@ -98,6 +100,12 @@
             ?>
                 <button class="btn"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
                 <?php endif; ?>  
+        </div>
+    </section>
+
+    <section>
+        <div class="max-width">
+            <h2><?php $headingPartners = get_field( 'heading-partners' ); ?> <?php if($headingPartners) {_e($headingPartners);} ?></h2>
         </div>
     </section>
 
