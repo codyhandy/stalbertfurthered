@@ -190,7 +190,7 @@ nav {
 }
 
 .main-menu li a {
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   font-size: clamp(1.8rem, 3vw, 2rem);
   display: block;
   color: var(--off-white);
@@ -234,7 +234,7 @@ section.featured {
   background-color: var(--off-white);
 }
 
- /* **** FOOTER ****  */
+/* **** FOOTER ****  */
 footer {
   background-color: var(--dark);
   color: var(--off-white);
@@ -300,8 +300,6 @@ footer .column:nth-of-type(2) ul li hr {
   text-align: center;
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
-
-
 
 /* **** MEDIA QUERIES ****  */
 
