@@ -23,20 +23,29 @@
         $the_service_query = new WP_Query( $args );
     ?>
 
-    <section class="section1 max-width">
-        <h2><?php $headingSection1 = get_field( 'heading-section1' ); ?> <?php if($headingSection1) {_e($headingSection1);} ?></h2>
-        <p><?php $textSection1 = get_field( 'text-section1' ); ?> <?php if($textSection1) {_e($textSection1);} ?></p>
+    <section class="section1">
+        <div class="max-width lg-flex">
+            <div class="text-container">
+                <h2><?php $headingSection1 = get_field( 'heading-section1' ); ?> <?php if($headingSection1) {_e($headingSection1);} ?></h2>
+                <p><?php $textSection1 = get_field( 'text-section1' ); ?> <?php if($textSection1) {_e($textSection1);} ?></p>
 
-        <!-- this block is for dynamically loading links  -->
-        <?php 
-            $linkSection1 = get_field( 'link-section1' );
-            if($linkSection1):
-                // create variables to store the link and the title
-                $link_title = $linkSection1['title'];
-                $link_url = $linkSection1['url'];
-        ?>
-            <button class="btn"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
+                <!-- this block is for dynamically loading links  -->
+                <?php 
+                    $linkSection1 = get_field( 'link-section1' );
+                    if($linkSection1):
+                        // create variables to store the link and the title
+                        $link_title = $linkSection1['title'];
+                        $link_url = $linkSection1['url'];
+                ?>
+                    <button class="btn"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
+                    <?php endif; ?>  
+            </div>
+            <?php if($imageSection1 = get_field( 'image-section1' )): ?>
+            <div class="image-container mobile-hidden">
+                <img src="<?php if($imageSection1) {_e($imageSection1);} ?>" alt="">
+            </div>
             <?php endif; ?>
+        </div> <!-- end of the max width wrapper -->
     </section>
 
     <section class="featured">

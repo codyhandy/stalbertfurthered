@@ -2,10 +2,11 @@
 window.onload=function(){
     const clickButton = document.querySelector('.mobile-btn');
 
-clickButton.addEventListener('click', ()=>{
-document.querySelector('.main-menu').classList.toggle('show-nav');
+  clickButton.addEventListener('click', ()=>{
+    document.querySelector('.main-menu').classList.toggle('show-nav');
+    clickButton.classList.toggle('open');
 
-});
+  });
 
 // let scrollBtn = document.querySelector('.scroll-btn');
 

@@ -21,6 +21,7 @@ Text Domain: further-education */
 html {
   font-size: 62.5%;
   margin: 0 !important;
+  min-width: 320px !important;
 }
 
 body {
@@ -33,6 +34,9 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
 }
+
+/* text padding while in mobile view  */
+h1, h2, h3, h4, h5, p { padding: 0 2rem;}
 
 /* typographical scales */
 h1,
@@ -51,6 +55,9 @@ h1 {
 h2 {
   font-size: clamp(2.4rem, 5vw, 3.6rem);
   line-height: 4.8rem;
+  color: var(--light-blue);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 h3 {
   font-size: clamp(2rem, 3vw, 2.4rem);
@@ -79,12 +86,12 @@ a {
   color: #000;
 }
 
-a:hover,
-a:active {
+button {
+  margin-top: 2rem;
 }
 
-section {
-  padding: 2rem 0;
+a:hover,
+a:active {
 }
 
 /* HELPER CLASSES  */
@@ -99,8 +106,8 @@ section {
 /* used on a container that should not stretch beyond the max-width */
 .max-width {
   max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  margin: auto;
+  padding: auto 1rem;
 }
 
 /* used to center text */
@@ -119,6 +126,11 @@ section {
 .column {
   padding: 2rem;
   width: 95%;
+}
+
+/* hides the content when the page is below a certain width  */
+.mobile-hidden {
+  display: none;
 }
 
 /* BASE BUTTON STYLING */
@@ -189,6 +201,26 @@ nav {
   fill: var(--blue);
 }
 
+/* put code here for nav button animation  - https://css-tricks.com/line-animated-hamburger-menu/ */
+/* .mobile-btn rect {
+  position: relative;
+}
+
+.mobile-btn.open rect:first-of-type {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+.mobile-btn.open rect:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+.mobile-btn.open rect:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 39px;
+  left: 8px;
+} */
+
 .main-menu li a {
   padding: 3rem 1rem;
   font-size: clamp(1.8rem, 3vw, 2rem);
@@ -219,14 +251,42 @@ nav {
   left: 0;
 }
 
+/* adds a dark bluish layer over top of the banner to make text mor legible  */
+.banner > .opacity {
+  background-color: #46739788;
+  padding: 12rem 0;
+}
+
+.banner {
+  color: #fff;
+}
+
 /* might add this later to darken everything that is behind the mobile nav  */
 .nav-darken {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* **** HOMEPAGE ****  */
+section {
+  margin: 4rem 0;
+  padding: 4rem 0;
+}
+
+.section1 {
+  text-align: center;
+}
+
+.section1 p {
+  text-align: left;
+}
+
 section.featured {
   background-color: var(--blue);
+  color: #fff;
+  text-align: center;
+}
+
+.featured h2{
   color: #fff;
 }
 
@@ -257,7 +317,7 @@ footer {
 .menu-footer-menu-container .menu-item a {
   color: var(--off-white);
   text-transform: uppercase;
-  font-size: clamp(1.8rem, 3vw, 2rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
   line-height: 4.8rem;
 }
 .menu-footer-menu-container .menu-item a:hover {
@@ -273,6 +333,7 @@ footer .column:first-of-type img {
 footer .column:nth-of-type(2) h3 {
   text-transform: uppercase;
   margin-bottom: 3rem;
+  padding: 0;
 }
 
 footer .column:nth-of-type(2) {
@@ -305,9 +366,25 @@ footer .column:nth-of-type(2) ul li hr {
 
 /* tablet size  */
 @media (min-width: 800px) {
+  h1, h2, h3, h4, h5, p { padding: 0;}
+
+  /* HELPER CLASSES  */
+
+  /* used on a container where the contents are to be flexed when at larger screen sizes  */
+  .lg-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
   /* HEADER  */
   .mobile-btn {
     display: none;
+  }
+
+  .mobile-hidden {
+    display: block;
   }
 
   .main-menu {
@@ -336,6 +413,12 @@ footer .column:nth-of-type(2) ul li hr {
     width: 70%;
   }
 
+
+  /* HOMEPAGE */
+  .section1 > div > * {
+    width: 45%;
+  }
+
   .card {
     width: 30%;
   }
@@ -345,6 +428,7 @@ footer .column:nth-of-type(2) ul li hr {
     justify-content: space-between;
   }
 
+  /* FOOTER  */
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
