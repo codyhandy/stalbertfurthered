@@ -202,24 +202,24 @@ nav {
 }
 
 /* put code here for nav button animation  - https://css-tricks.com/line-animated-hamburger-menu/ */
-/* .mobile-btn rect {
+.mobile-btn rect {
   position: relative;
+  transform-origin: 50% 50%;
+  transition: 0.5s;
 }
 
 .mobile-btn.open rect:first-of-type {
-  transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
+  opacity: 0;
 }
 .mobile-btn.open rect:nth-of-type(2) {
-  width: 0%;
-  opacity: 0;
+  transform: rotate(45deg);
 }
 .mobile-btn.open rect:nth-of-type(3) {
   transform: rotate(-45deg);
-  top: 39px;
-  left: 8px;
-} */
+}
+.mobile-btn.open rect:last-of-type {
+  opacity: 0;
+}
 
 .main-menu li a {
   padding: 3rem 1rem;
