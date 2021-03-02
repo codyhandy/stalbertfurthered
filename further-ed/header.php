@@ -61,7 +61,7 @@
         <!-- trying to put this here so that it will work on all pages, if it doesnt work move back to content-home  -->
         <div class="banner" style="background: url(<?php $banner = get_field( 'banner-image' ); ?> <?php if($banner) {_e($banner);} ?>) no-repeat 50% 50%; background-size: cover;">
             <div class="opacity">
-                <div class="banner-text">
+                <div class="banner-text max-width">
                     <h1><?php $bannerHeading = get_field( 'main-heading' ); ?> <?php if($bannerHeading) {_e($bannerHeading);} ?></h1>
                     <p><?php $bannerText = get_field( 'main-subheading' ); ?> <?php if($bannerText) {_e($bannerText);} ?></p>
                 </div>
