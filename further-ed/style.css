@@ -24,6 +24,8 @@ html {
   min-width: 320px !important;
 }
 
+/* this is a new comment */
+
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
@@ -36,7 +38,14 @@ body {
 }
 
 /* text padding while in mobile view  */
-h1, h2, h3, h4, h5, p { padding: 0 2rem;}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0 2rem;
+}
 
 /* typographical scales */
 h1,
@@ -286,7 +295,7 @@ section.featured {
   text-align: center;
 }
 
-.featured h2{
+.featured h2 {
   color: #fff;
 }
 
@@ -366,7 +375,14 @@ footer .column:nth-of-type(2) ul li hr {
 
 /* tablet size  */
 @media (min-width: 800px) {
-  h1, h2, h3, h4, h5, p { padding: 0;}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    padding: 0;
+  }
 
   /* HELPER CLASSES  */
 
@@ -376,7 +392,6 @@ footer .column:nth-of-type(2) ul li hr {
     justify-content: space-between;
     align-items: center;
   }
-
 
   /* HEADER  */
   .mobile-btn {
@@ -412,7 +427,6 @@ footer .column:nth-of-type(2) ul li hr {
   .menu-main-menu-container {
     width: 70%;
   }
-
 
   /* HOMEPAGE */
   .section1 > div > * {
