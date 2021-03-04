@@ -45,6 +45,7 @@ h4,
 h5,
 p {
   padding: 0 2rem;
+  line-height: 3rem;
 }
 
 /* typographical scales */
@@ -72,12 +73,17 @@ h3 {
   font-size: clamp(2rem, 3vw, 2.4rem);
   line-height: 4.8rem;
 }
+.banner-text > p {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  line-height: 4rem;
+  letter-spacing: 0.15rem;
+  max-width: 90%;
+}
 h4 {
   /* font-family: ; Century Gothic */
   text-transform: uppercase;
   margin: 1rem 0;
 }
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -262,7 +268,7 @@ nav {
 
 /* adds a dark bluish layer over top of the banner to make text mor legible  */
 .banner > .opacity {
-  background-color: #46739788;
+  background-color: #46739794;
   padding: 12rem 0;
 }
 
@@ -382,6 +388,9 @@ footer .column:nth-of-type(2) ul li hr {
   h5,
   p {
     padding: 0;
+  }
+  .banner-text > p {
+    max-width: 50%;
   }
 
   /* HELPER CLASSES  */
