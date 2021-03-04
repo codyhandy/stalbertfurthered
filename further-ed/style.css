@@ -424,6 +424,10 @@ footer .column:nth-of-type(2) ul li hr {
     cursor: pointer;
   }
 
+  .main-menu li a:active {
+    background-color: transparent;
+  }
+
   .menu-main-menu-container {
     width: 70%;
   }

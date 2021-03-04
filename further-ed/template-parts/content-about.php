@@ -11,10 +11,8 @@
 <!-- entry header -->
 <header>
 <!-- get the page title -->
- <?php the_title('<h1 class="entry-title max-width">', '</h1>'); ?>
  </header>
 <!-- if you had an image it will display using wordpress's largest default thumbnail sizing (settings in the admin - you can see the sizes) -->
-<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
  <div class="entry-content">
  <?php the_content(); ?>
  </div>
