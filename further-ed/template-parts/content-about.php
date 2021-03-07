@@ -13,10 +13,10 @@
 <!-- get the page title -->
  </header>
 <!-- if you had an image it will display using wordpress's largest default thumbnail sizing (settings in the admin - you can see the sizes) -->
- <div class="entry-content">
+ <div class="entry-content max-width section1">
  <?php the_content(); ?>
  </div>
-<div class="staff-card-deck three-column-grid">
+<div class="staff-card-deck three-column-grid section1 max-width blue">
             <?php
              
              $args = array(

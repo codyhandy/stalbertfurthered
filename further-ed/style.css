@@ -376,7 +376,10 @@ footer .column:nth-of-type(2) ul li hr {
   text-align: center;
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
-
+/* **** ABOUT PAGE ****  */
+.blue{
+  background-color:blue;
+}
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
