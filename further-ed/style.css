@@ -377,9 +377,37 @@ footer .column:nth-of-type(2) ul li hr {
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 /* **** ABOUT PAGE ****  */
-.blue{
-  background-color:blue;
+.entry-content{
+  text-align: center;
+  padding: 4rem 0 4rem 0;
 }
+.staff-card-deck{
+  text-align: center;
+  width: 90%;
+}
+.staff-card img{
+  height: 100%;
+}
+.staff-card{
+  margin-bottom: 6rem;
+}
+.partners {
+  background-color: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+.partners h2{
+  color: #fff;
+}
+.partners ul{
+  margin-bottom: 2rem;
+}
+/* CATEGORY PAGE */
+.category-content > img{
+  height: 30rem;
+}
+
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
@@ -472,6 +500,24 @@ footer .column:nth-of-type(2) ul li hr {
   .footer-nav {
     text-align: left;
   }
+  /* ABOUT PAGE */
+  .three-column-grid-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
+  }
+  .entry-content{
+    text-align: center;
+    padding: 6rem;
+  }
+  .staff-card-deck{
+    text-align: center;
+  }
+  .staff-card img{
+    width: 65%;
+    height: 75%;
+    display: inline;
+  }
 }
 
 /* desktop version  */
@@ -501,6 +547,8 @@ footer .column:nth-of-type(2) ul li hr {
     margin-top: 0rem;
     margin-left: 0rem;
   }
+  /* ABOUT PAGE */
+
 }
 
 /* desktop version  */
