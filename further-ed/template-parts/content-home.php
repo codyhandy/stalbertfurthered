@@ -74,7 +74,7 @@
             <?php if ( $the_service_query->have_posts() ) : ?>
             <div class="card-container">   
                     <?php while ( $the_service_query->have_posts() ) : $the_service_query->the_post();?>
-                        <div class="card">
+                        <div class="card services">
                             <?php if($serviceIcon = get_field( 'service-icon' )): ?>
                                 <div class="icon"><?php the_field('service-icon'); ?></div>
                             <?php endif; ?>

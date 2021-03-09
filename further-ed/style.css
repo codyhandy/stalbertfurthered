@@ -153,6 +153,8 @@ a:active {
   background-color: transparent;
   border: 2px solid var(--blue);
   padding: 0;
+  width: 15rem;
+  margin: 0 auto;
 }
 
 .btn a {
@@ -191,6 +193,10 @@ a:active {
 /* BASE CARD STYLING */
 .card {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  /* added this to always make cards same dimensions */
 }
 
 /* **** HEADER ****  */
@@ -309,6 +315,15 @@ section.featured {
   background-color: var(--off-white);
 }
 
+/* services styling */
+.icon {
+  color: #2b21297a;
+  margin: 5rem auto 2px auto;
+}
+.services h3 {
+  flex-grow: 1;
+}
+
 /* **** FOOTER ****  */
 footer {
   background-color: var(--dark);
@@ -377,18 +392,18 @@ footer .column:nth-of-type(2) ul li hr {
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 /* **** ABOUT PAGE ****  */
-.entry-content{
+.entry-content {
   text-align: center;
   padding: 4rem 0 4rem 0;
 }
-.staff-card-deck{
+.staff-card-deck {
   text-align: center;
   width: 90%;
 }
-.staff-card img{
+.staff-card img {
   height: 100%;
 }
-.staff-card{
+.staff-card {
   margin-bottom: 6rem;
 }
 .partners {
@@ -397,14 +412,14 @@ footer .column:nth-of-type(2) ul li hr {
   text-align: center;
   padding: 4rem 0;
 }
-.partners h2{
+.partners h2 {
   color: #fff;
 }
-.partners ul{
+.partners ul {
   margin-bottom: 2rem;
 }
 /* CATEGORY PAGE */
-.category-content > img{
+.category-content > img {
   height: 30rem;
 }
 
@@ -486,6 +501,12 @@ footer .column:nth-of-type(2) ul li hr {
     justify-content: space-between;
   }
 
+  /* services styling */
+  .icon {
+    color: #2b21297a;
+    margin: 0 auto;
+  }
+
   /* FOOTER  */
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -506,14 +527,14 @@ footer .column:nth-of-type(2) ul li hr {
     grid-template-columns: repeat(3, 1fr);
     /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
   }
-  .entry-content{
+  .entry-content {
     text-align: center;
     padding: 6rem;
   }
-  .staff-card-deck{
+  .staff-card-deck {
     text-align: center;
   }
-  .staff-card img{
+  .staff-card img {
     width: 65%;
     height: 75%;
     display: inline;
@@ -548,7 +569,6 @@ footer .column:nth-of-type(2) ul li hr {
     margin-left: 0rem;
   }
   /* ABOUT PAGE */
-
 }
 
 /* desktop version  */
