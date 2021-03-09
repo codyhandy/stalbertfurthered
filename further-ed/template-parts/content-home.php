@@ -25,17 +25,17 @@
 
     <section class="section1">
         <div class="max-width lg-flex">
-            <div class="text-container">
-                <h2><?php $headingSection1 = get_field( 'heading-section1' ); ?> <?php if($headingSection1) {_e($headingSection1);} ?></h2>
-                <p><?php $textSection1 = get_field( 'text-section1' ); ?> <?php if($textSection1) {_e($textSection1);} ?></p>
+            <div class="max-width">
+                <h2><?php $headingFeatured = get_field( 'heading-featured' ); ?> <?php if($headingFeatured) {_e($headingFeatured);} ?></h2>
+                <p><?php $textFeatured = get_field( 'text-featured' ); ?> <?php if($textFeatured) {_e($textFeatured);} ?></p>
 
                 <!-- this block is for dynamically loading links  -->
                 <?php 
-                    $linkSection1 = get_field( 'link-section1' );
-                    if($linkSection1):
+                    $linkFeatured = get_field( 'link-featured' );
+                    if($linkFeatured):
                         // create variables to store the link and the title
-                        $link_title = $linkSection1['title'];
-                        $link_url = $linkSection1['url'];
+                        $link_title = $linkFeatured['title'];
+                        $link_url = $linkFeatured['url'];
                 ?>
                     <button class="btn"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
                     <?php endif; ?>  
@@ -46,24 +46,6 @@
             </div>
             <?php endif; ?>
         </div> <!-- end of the max width wrapper -->
-    </section>
-
-    <section class="featured">
-        <div class="max-width">
-            <h2><?php $headingFeatured = get_field( 'heading-featured' ); ?> <?php if($headingFeatured) {_e($headingFeatured);} ?></h2>
-            <p><?php $textFeatured = get_field( 'text-featured' ); ?> <?php if($textFeatured) {_e($textFeatured);} ?></p>
-
-            <!-- this block is for dynamically loading links  -->
-            <?php 
-                $linkFeatured = get_field( 'link-featured' );
-                if($linkFeatured):
-                    // create variables to store the link and the title
-                    $link_title = $linkFeatured['title'];
-                    $link_url = $linkFeatured['url'];
-            ?>
-                <button class="btn inv"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
-                <?php endif; ?>  
-        </div>
     </section>
 
     <section>
@@ -86,6 +68,24 @@
             <?php endif; ?>
             </div> <!-- end of the card container -->
         </div>
+    </section>
+
+    <section class="featured">
+            <div class="text-container">
+                <h2><?php $headingSection1 = get_field( 'heading-section1' ); ?> <?php if($headingSection1) {_e($headingSection1);} ?></h2>
+                <p><?php $textSection1 = get_field( 'text-section1' ); ?> <?php if($textSection1) {_e($textSection1);} ?></p>
+
+                <!-- this block is for dynamically loading links  -->
+                <?php 
+                    $linkSection1 = get_field( 'link-section1' );
+                    if($linkSection1):
+                        // create variables to store the link and the title
+                        $link_title = $linkSection1['title'];
+                        $link_url = $linkSection1['url'];
+                ?>
+                    <button class="btn inv"><a href="<?php print_r( esc_url ($link_url) ); ?>"><?php print_r( esc_html($link_title) ); ?></a></button>
+                    <?php endif; ?>  
+            </div>
     </section>
 
     <section>
