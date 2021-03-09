@@ -76,7 +76,7 @@
                     <?php while ( $the_service_query->have_posts() ) : $the_service_query->the_post();?>
                         <div class="card">
                             <?php if($serviceIcon = get_field( 'service-icon' )): ?>
-                                <img src="<?php if($serviceIcon) {_e($serviceIcon);} ?>" alt="">
+                                <div class="icon"><?php the_field('service-icon'); ?></div>
                             <?php endif; ?>
                             <h3><?php $serviceHeading = get_field( 'service-heading' ); ?> <?php if($serviceHeading) {_e($serviceHeading);} ?></h3>
                             <button class="btn"><a href="<?php the_permalink(); ?>">View More</a></button>

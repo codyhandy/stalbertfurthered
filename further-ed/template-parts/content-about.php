@@ -70,7 +70,7 @@
             <?php endif; ?>  
 </div>
 
-<div class = "partners">
+<div class = "partners-container">
     <?php 
         
         $partners = get_field('partners')?>
