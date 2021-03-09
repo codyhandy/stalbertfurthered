@@ -41,7 +41,7 @@
                     <?php endif; ?>  
             </div>
             <?php if($imageSection1 = get_field( 'image-section1' )): ?>
-            <div class="image-container mobile-hidden">
+            <div class="image-container mobile-hidden max-width">
                 <img src="<?php if($imageSection1) {_e($imageSection1);} ?>" alt="">
             </div>
             <?php endif; ?>
@@ -71,7 +71,7 @@
     </section>
 
     <section class="featured">
-            <div class="text-container">
+            <div class="text-container max-width">
                 <h2><?php $headingSection1 = get_field( 'heading-section1' ); ?> <?php if($headingSection1) {_e($headingSection1);} ?></h2>
                 <p><?php $textSection1 = get_field( 'text-section1' ); ?> <?php if($textSection1) {_e($textSection1);} ?></p>
 

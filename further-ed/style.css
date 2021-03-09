@@ -154,7 +154,7 @@ a:active {
   border: 2px solid var(--blue);
   padding: 0;
   width: 15rem;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .btn a {
@@ -296,15 +296,16 @@ section {
 .section1 {
   text-align: center;
 }
-
-.section1 p {
-  text-align: left;
+.section1 p{
+  margin-bottom: 1rem;
 }
-
 section.featured {
   background-color: var(--blue);
   color: #fff;
   text-align: center;
+}
+.featured p{
+  margin-bottom: 1rem;
 }
 
 .featured h2 {
@@ -313,6 +314,9 @@ section.featured {
 
 .section2 {
   background-color: var(--off-white);
+}
+.section2 p{
+  text-align: center;
 }
 
 /* services styling */
@@ -491,6 +495,9 @@ footer .column:nth-of-type(2) ul li hr {
   .section1 > div > * {
     width: 45%;
   }
+  .featured{
+    padding: 4rem 2rem;
+  }
 
   .card {
     width: 30%;
@@ -499,6 +506,12 @@ footer .column:nth-of-type(2) ul li hr {
   .card-container {
     display: flex;
     justify-content: space-between;
+  }
+  .section1{
+    text-align: left;
+  }
+  .section1 h2{
+    text-align: left;
   }
 
   /* services styling */
