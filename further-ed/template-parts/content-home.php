@@ -23,6 +23,30 @@
         $the_service_query = new WP_Query( $args );
     ?>
 
+    <?php
+        //creates the query to fetch the categories
+        //parameters display the categories sorted by name.
+        $args1 = array(
+            'orderby' => 'name',
+            'order' => 'ASC',
+            'parent' => 0
+        );
+
+        // removes the "uncategorized" category from the array
+        $uncategorized = get_categories( array( 'slug' => 'uncategorized' ) );
+        if($uncategorized) {
+            $excluded_id = array();
+
+            foreach ( $uncategorized as $category ) {
+                $excluded_id[] = $category->term_id;
+            }
+            $args1['exclude'] = $excluded_id;
+        }
+
+        // loads all categories into the array
+        $categories = get_categories($args1);
+    ?>
+
     <section class="section1">
         <div class="max-width lg-flex">
             <div class="max-width">
@@ -91,6 +115,17 @@
     <section>
         <div class="max-width">
             <h2><?php $headingCourses = get_field( 'heading-courses' ); ?> <?php if($headingCourses) {_e($headingCourses);} ?></h2>
+            <div class="card-container">
+                <?php foreach($categories as $category) { ?>
+
+                <a class="card" href="<?php echo (get_category_link( $category->term_id )) ?>">
+                    <div class="category-content">
+                        <img src="<?php echo z_taxonomy_image_url($category->term_id); ?>" alt="Category Image">
+                        <h3><?php echo ($category->name) ?></h3>
+                    </div>
+                </a>
+                <?php } ?>
+            </div> <!-- end of the card container -->
         </div>
     </section>
 

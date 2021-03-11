@@ -39,12 +39,42 @@ get_header();
         $categories = get_categories($args);
     ?>
 
-    <h2><?php single_cat_title('', true); ?></h2>
 
-    <?php foreach($categories as $category) { ?>
-        <h3><?php echo ($category->name) ?></h3>
-        <!-- add the code to loop through the posts of the specific sub category -->
-    <?php } ?>
+    <div class="banner" style="background: url() no-repeat 50% 50%; background-size: cover;">
+        <div class="opacity">
+            <div class="banner-text max-width">
+                <h1><?php single_cat_title('', true); ?></h1>
+             </div>
+        </div>
+    </div>
+
+    <div class="max-width">
+        <?php foreach($categories as $category) { ?>
+            <h2><?php echo ($category->name) ?></h2>
+            <!-- add the code to loop through the posts of the specific sub category -->
+            <?php 
+                $args1 = array(
+                    'post_type' => 'courses',
+                    'posts_per_page' => 3,
+                    'order' => 'ASC',
+                    'category_name' => ($category->name) 
+                );
+                //new WP_Query object saved as the variable $the_query.
+                $the_course_query = new WP_Query( $args1 );
+            ?>
+
+            <?php while ( $the_course_query->have_posts() ) : $the_course_query->the_post(); ?>
+                <h3><?php the_title(); ?></h3>
+                <?php if($courseDesc = get_field( 'course-desc' )): ?>
+                    <p><?php the_field('course-desc'); ?></p>
+                <?php endif; ?>
+
+                <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
+            <?php endwhile; ?>
+
+        <?php } ?>
+    </div>
+    
 
     
 </main>
