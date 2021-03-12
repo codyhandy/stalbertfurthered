@@ -13,7 +13,7 @@
         //creates the query to fetch the services
         //parameters display the latest services.
         $args = array(
-            'post_type' => 'single-service',
+            'post_type' => 'services',
             'posts_per_page' => 3,
             'orderby' => 'date', 
             'order' => 'ASC' 

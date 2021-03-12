@@ -15,11 +15,37 @@ get_header();
 <!-- start the loop -->
 <?php while(have_posts()) : the_post(); ?>
 
-<?php if($serviceIcon = get_field( 'service-icon' )): ?>
-                                <div class="icon"><?php the_field('service-icon'); ?></div>
-                            <?php endif; ?>
-                            <h3><?php $serviceHeading = get_field( 'service-heading' ); ?> <?php if($serviceHeading) {_e($serviceHeading);} ?></h3>
-            <?php the_content(); ?>
+<!-- insert banner here -->
+
+<div class="banner" style="background: url(<?php $banner = get_field( 'banner-image' ); ?> <?php if($banner) {_e($banner);} ?>) no-repeat 50% 50%; background-size: cover;">
+    <div class="opacity">
+        <div class="banner-text max-width">
+            <h1><?php $bannerHeading = get_field( 'main-heading' ); ?> <?php if($bannerHeading) {_e($bannerHeading);} ?></h1>
+            <p><?php $bannerText = get_field( 'main-subheading' ); ?> <?php if($bannerText) {_e($bannerText);} ?></p>
+        </div>
+    </div>
+</div>
+       
+
+<div class="service-container max-width flex">
+    <div class="entry-content text-left">
+     <?php the_content(); ?>
+     </div>
+     
+    <div class = "form">
+        <?php 
+            
+            $form = get_field('contact_form')?>
+        
+            <?php if($form) :  ?> 
+    
+                <div class="contact-us-form"><?php the_field('contact_form'); ?></div>
+    
+            <?php endif; ?>
+        
+        </div>
+</div>
+ 
   
  <?php endwhile; ?>
         <!-- end while loop -->

@@ -129,6 +129,9 @@ a:active {
 .text-center {
   text-align: center;
 }
+.text-left {
+  text-align: left;
+}
 
 /* three column grid - responsive to screen sizes */
 .three-column-grid {
@@ -296,7 +299,7 @@ section {
 .section1 {
   text-align: center;
 }
-.section1 p{
+.section1 p {
   margin-bottom: 1rem;
 }
 section.featured {
@@ -304,7 +307,7 @@ section.featured {
   color: #fff;
   text-align: center;
 }
-.featured p{
+.featured p {
   margin-bottom: 1rem;
 }
 
@@ -315,7 +318,7 @@ section.featured {
 .section2 {
   background-color: var(--off-white);
 }
-.section2 p{
+.section2 p {
   text-align: center;
 }
 
@@ -396,7 +399,7 @@ footer .column:nth-of-type(2) ul li hr {
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 /* **** ABOUT PAGE ****  */
-.entry-content {
+.about-entry-content {
   text-align: center;
   padding: 4rem 0 4rem 0;
 }
@@ -495,7 +498,7 @@ footer .column:nth-of-type(2) ul li hr {
   .section1 > div > * {
     width: 45%;
   }
-  .featured{
+  .featured {
     padding: 4rem 2rem;
   }
 
@@ -507,10 +510,10 @@ footer .column:nth-of-type(2) ul li hr {
     display: flex;
     justify-content: space-between;
   }
-  .section1{
+  .section1 {
     text-align: left;
   }
-  .section1 h2{
+  .section1 h2 {
     text-align: left;
   }
 
@@ -540,7 +543,7 @@ footer .column:nth-of-type(2) ul li hr {
     grid-template-columns: repeat(3, 1fr);
     /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
   }
-  .entry-content {
+  .about-entry-content {
     text-align: center;
     padding: 6rem;
   }
