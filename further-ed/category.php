@@ -14,6 +14,7 @@ get_header();
     <?php
         // uses the title 
         $catTitle = single_cat_title('', false);
+        // stores the ID of the parent category
         $catID = get_cat_ID($catTitle);
 
         //creates the query to fetch the categories
@@ -40,10 +41,13 @@ get_header();
     ?>
 
 
-    <div class="banner" style="background: url() no-repeat 50% 50%; background-size: cover;">
+    <div class="banner" style="background: url(<?php echo z_taxonomy_image_url($category->$catID); ?>) no-repeat 50% 50%; background-size: cover;">
         <div class="opacity">
             <div class="banner-text max-width">
                 <h1><?php single_cat_title('', true); ?></h1>
+                <?php if(category_description( $category->$catID )){
+                        echo category_description( $category->$catID );
+                } ?>
              </div>
         </div>
     </div>
@@ -55,22 +59,24 @@ get_header();
             <?php 
                 $args1 = array(
                     'post_type' => 'courses',
-                    'posts_per_page' => 3,
                     'order' => 'ASC',
                     'category_name' => ($category->name) 
                 );
                 //new WP_Query object saved as the variable $the_query.
                 $the_course_query = new WP_Query( $args1 );
             ?>
+            <div class="course-container">
+                <?php while ( $the_course_query->have_posts() ) : $the_course_query->the_post(); ?>
+                    <div class="card course">
+                        <h3><?php the_title(); ?></h3>
+                        <?php if($courseDesc = get_field( 'course-desc' )): ?>
+                            <p><?php the_field('course-desc'); ?></p>
+                        <?php endif; ?>
 
-            <?php while ( $the_course_query->have_posts() ) : $the_course_query->the_post(); ?>
-                <h3><?php the_title(); ?></h3>
-                <?php if($courseDesc = get_field( 'course-desc' )): ?>
-                    <p><?php the_field('course-desc'); ?></p>
-                <?php endif; ?>
-
-                <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
-            <?php endwhile; ?>
+                        <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
+                    </div>    
+                <?php endwhile; ?>
+            </div>
 
         <?php } ?>
     </div>
