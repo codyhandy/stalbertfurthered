@@ -14,7 +14,7 @@ get_header();
 <h1>
 <!-- /* translators: %s: query term */ -->
 <?php printf(
-esc_html__( 'Search Results for %s', 'design+code'),
+esc_html__( 'Search Results for %s', 'further-ed'),
 '<span>' . get_search_query() . '</span>'
 ); ?>
 </h1>

@@ -13,7 +13,7 @@
 <!-- get the page title -->
  </header>
 <!-- if you had an image it will display using wordpress's largest default thumbnail sizing (settings in the admin - you can see the sizes) -->
-<div class="contact-container">
+<div class="contact-container max-width">
     <div class = "form">
         <?php 
             
