@@ -452,6 +452,25 @@ footer .column:nth-of-type(2) ul li hr {
   border: 1px solid #b7b7b7;
 }
 
+/* CONTACT PAGES  */
+.form{
+  background-color: #F3F3F3;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+.form p{
+  margin-bottom: 2rem;
+}
+.wpcf7-submit{
+  background-color: #96302B;
+  color: #E6E9E7;
+  border: none;
+  padding: .5rem 1rem;
+}
+.contact p{
+  text-align: center;
+  margin: 2rem 0;
+}
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
@@ -583,6 +602,14 @@ footer .column:nth-of-type(2) ul li hr {
   .course-container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+/* CONTACT PAGES  */
+.form{
+  padding: 2rem;
+  margin: 1rem;
+}
+.contact{
+  padding: 2rem;
 }
 
 /* desktop version  */

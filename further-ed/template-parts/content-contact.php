@@ -13,22 +13,23 @@
 <!-- get the page title -->
  </header>
 <!-- if you had an image it will display using wordpress's largest default thumbnail sizing (settings in the admin - you can see the sizes) -->
-<div class = "form">
-    <?php 
+<div class="contact-container">
+    <div class = "form">
+        <?php 
+            
+            $form = get_field('contact_form')?>
         
-        $form = get_field('contact_form')?>
-    
-        <?php if($form) :  ?> 
+            <?php if($form) :  ?> 
 
-            <div class="contact-us-form"><?php the_field('contact_form'); ?></div>
+                <div class="contact-us-form"><?php the_field('contact_form'); ?></div>
 
-        <?php endif; ?>
-    
+            <?php endif; ?>
+        
+        </div>
+    <div class="entry-content contact">
+    <?php the_content(); ?>
     </div>
- <div class="entry-content">
- <?php the_content(); ?>
- </div>
-
+</div>
 
 
 
