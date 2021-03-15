@@ -63,11 +63,29 @@
             <div class="banner" style="background: url(<?php $banner = get_field( 'banner-image' ); ?> <?php if($banner) {_e($banner);} ?>) no-repeat 50% 50%; background-size: cover;">
                 <div class="opacity">
                     <div class="banner-text max-width">
+
+                        <div class="banner-logo" style="width:100px;"><?php $bannerLogo = get_field( 'logo' ); ?> <?php if($bannerLogo):?> <img src="<?php echo $bannerLogo ?>"/><?php endif; ?></div>
+
+                        
                         <h1><?php $bannerHeading = get_field( 'main-heading' ); ?> <?php if($bannerHeading) {_e($bannerHeading);} ?></h1>
                         <p><?php $bannerText = get_field( 'main-subheading' ); ?> <?php if($bannerText) {_e($bannerText);} ?></p>
+                        
+                        <?php 
+                        $bannerLink = get_field('button');
+                        if( $bannerLink ): 
+                        $bannerLink_url = $bannerLink['url'];
+                        $bannerLink_title = $bannerLink['title'];
+                        $bannerLink_target = $bannerLink['target'] ? $bannerLink['target'] : '_self';
+                        ?>
+                        <button class="btn inv"><a href="<?php echo esc_url( $bannerLink_url ); ?>" target="<?php echo esc_attr( $bannerLink_target ); ?>"><?php echo esc_html( $bannerLink_title ); ?></a></button>
+                        <?php endif; ?>
+                        
+                        
                     </div>
+                  
                 </div>
-            </div>
+             </div>
+        </div>
         <?php endif; ?>
         
     
