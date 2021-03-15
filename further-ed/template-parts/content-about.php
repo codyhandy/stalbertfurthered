@@ -13,7 +13,7 @@
 <!-- get the page title -->
  </header>
 <!-- if you had an image it will display using wordpress's largest default thumbnail sizing (settings in the admin - you can see the sizes) -->
- <div class="entry-content max-width">
+ <div class="about-entry-content max-width">
  <?php the_content(); ?>
  </div>
 <div class="staff-card-deck three-column-grid-about max-width">
@@ -30,7 +30,7 @@
              ?>
              <?php if($the_query->have_posts() ):  ?>
              <?php while ($the_query->have_posts() ): $the_query->the_post(); ?>
-             <div class="staff-card">
+             <div class="course card">
              <?php 
             
             $photo = get_field('photo')?>

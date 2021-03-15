@@ -210,6 +210,31 @@ a:active {
   /* added this to always make cards same dimensions */
 }
 
+/* search form styling */
+.search-bar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border: 2px solid var(--blue);
+  color: var(--dark);
+  text-align: center;
+  width: 30rem;
+  background-color:#f3f8f6a8;
+}
+.search-bar input{
+  width:90%;
+  border:none;
+  background-color:transparent;
+  padding: 0.5rem;
+}
+.search-bar > button {
+  margin:0;
+  border:none;
+  background-color:transparent;
+}
+::placeholder{
+  color:var(--dark);
+}
 
 
 /* **** HEADER ****  */
@@ -342,19 +367,25 @@ section.featured {
 }
 
 /* **** FOOTER ****  */
-footer {
+.footer-top-colors {
   background-color: var(--dark);
   color: var(--off-white);
   padding-top: 2rem;
 }
+.footer-lower-colors {
+  background-color:#101111;
+  color: var(--off-white);
+  padding:1rem;
+}
 
-.footer-grid {
+.footer-grid, .footer-lower-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
 }
+
 
 .menu-footer-menu-container ul {
   display: grid;
@@ -407,23 +438,29 @@ footer .column:nth-of-type(2) ul li hr {
 .footer-nav {
   text-align: center;
 }
+.footer-lower-grid .column:first-of-type{text-align:center;}
+.footer-lower-grid .column:nth-of-type(2) ul li a{color:#666; font-size:50px; margin: 0 1rem 0 1rem;}
+.footer-lower-grid .column:nth-of-type(2) ul li a:hover{color:var(--light-blue);}
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 
 /* **** ABOUT PAGE ****  */
+.three-column-grid-about {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5rem;
+  margin: 5rem auto;
+  /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
+}
 .about-entry-content {
   text-align: center;
   padding: 4rem 0 4rem 0;
 }
+
 .staff-card-deck {
   text-align: center;
-  width: 90%;
+  width: 75%;
 }
-.staff-card img {
-  height: 100%;
-}
-.staff-card {
-  margin-bottom: 6rem;
-}
+
 .partners {
   background-color: var(--blue);
   color: #fff;
@@ -598,6 +635,12 @@ footer .column:nth-of-type(2) ul li hr {
     align-items: flex-start;
     justify-items: flex-start;
   }
+  .footer-lower-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  .footer-lower-grid .column:first-of-type{text-align:left;}
   .menu-footer-menu-container ul {
     grid-template-columns: 1fr;
     margin-top: -15rem;
@@ -610,20 +653,30 @@ footer .column:nth-of-type(2) ul li hr {
   .three-column-grid-about {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10rem;
+    margin: 5rem auto;
     /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
   }
+
+  .staff-card-deck > .course.card:hover{
+    background-color:var(--red);
+    color:var(--off-white);
+  }
+
   .about-entry-content {
     text-align: center;
     padding: 6rem;
   }
-  .staff-card-deck {
-    text-align: center;
+
+  .executives-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .staff-card img {
-    width: 65%;
-    height: 75%;
-    display: inline;
+
+  .executives-grid div ul li{
+    margin: 1rem 0;
   }
+  
 
   /* COURSES  */
   .course-container {
