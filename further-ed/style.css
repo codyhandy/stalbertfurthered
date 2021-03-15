@@ -160,6 +160,14 @@ a:active {
   margin: 1rem auto;
 }
 
+.btn-red{
+  background-color: #96302B;
+  color: #fff;
+  padding: 0;
+  width: 15rem;
+  margin: 1rem auto;
+}
+
 .btn a {
   padding: 1rem 2rem;
   color: var(--blue);
@@ -463,13 +471,19 @@ footer .column:nth-of-type(2) ul li hr {
 }
 .wpcf7-submit{
   background-color: #96302B;
-  color: #E6E9E7;
+  color: #fff;
   border: none;
-  padding: .5rem 1rem;
+  padding: 0;
+  width: 15rem;
+  margin: 1rem auto;
 }
 .contact p{
   text-align: center;
   margin: 2rem 0;
+}
+.contact-container{
+  display: flex;
+  flex-wrap: wrap;
 }
 /* **** MEDIA QUERIES ****  */
 
@@ -611,6 +625,9 @@ footer .column:nth-of-type(2) ul li hr {
 .contact{
   padding: 2rem;
 }
+/* .contact-container{
+  flex-direction: row;
+} */
 
 /* desktop version  */
 @media (min-width: 1150px) {
