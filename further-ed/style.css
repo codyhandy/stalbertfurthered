@@ -202,6 +202,8 @@ a:active {
   /* added this to always make cards same dimensions */
 }
 
+
+
 /* **** HEADER ****  */
 header {
   background-color: var(--off-white);
@@ -398,6 +400,7 @@ footer .column:nth-of-type(2) ul li hr {
   text-align: center;
 }
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
+
 /* **** ABOUT PAGE ****  */
 .about-entry-content {
   text-align: center;
@@ -425,9 +428,28 @@ footer .column:nth-of-type(2) ul li hr {
 .partners ul {
   margin-bottom: 2rem;
 }
+
 /* CATEGORY PAGE */
 .category-content > img {
   height: 30rem;
+}
+
+/* COURSE PAGES  */
+.card-bg {
+  height: 30rem; 
+  width: 100%; 
+  background-position: center;
+}
+
+.course-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 0 2rem;
+}
+
+.card.course {
+  border: 1px solid #b7b7b7;
 }
 
 /* **** MEDIA QUERIES ****  */
@@ -503,7 +525,8 @@ footer .column:nth-of-type(2) ul li hr {
   }
 
   .card {
-    width: 30%;
+    /* width: 30%; */
+    /* commented out since was messing with course cards, if this is needed we can just split the classes  */
   }
 
   .card-container {
@@ -555,6 +578,11 @@ footer .column:nth-of-type(2) ul li hr {
     height: 75%;
     display: inline;
   }
+
+  /* COURSES  */
+  .course-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* desktop version  */
@@ -585,6 +613,11 @@ footer .column:nth-of-type(2) ul li hr {
     margin-left: 0rem;
   }
   /* ABOUT PAGE */
+
+  /* COURSES  */
+  .course-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* desktop version  */
