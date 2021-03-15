@@ -25,4 +25,16 @@
                <?php endif; ?>
           </div>
 </div>
+<div class ="footer-lower-grid max-width">
+          <div class = "column">
+          <?php if ( is_active_sidebar( 'footer-col-four' ) ) : ?>
+          <?php dynamic_sidebar( 'footer-col-four' ); ?>
+          <?php endif; ?>
+          </div>
+          <div class = "column">
+          <?php if ( is_active_sidebar( 'footer-col-five' ) ) : ?>
+          <?php dynamic_sidebar( 'footer-col-five' ); ?>
+          <?php endif; ?>
+          </div>
+</div>
 

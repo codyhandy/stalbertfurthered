@@ -119,6 +119,28 @@ if ( ! function_exists( 'sta_widget_areas' ) ) {
 				'after_title'   => '</h3>',
 			)
         );
+        register_sidebar(
+			array(
+				'name'          => __( 'Footer four', 'further-ed' ),
+				'id'            => 'footer-col-four',
+				'description'   => __( 'Footer column four widget area', 'further-ed' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+        );
+        register_sidebar(
+			array(
+				'name'          => __( 'Footer five', 'further-ed' ),
+				'id'            => 'footer-col-five',
+				'description'   => __( 'Footer column five widget area', 'further-ed' ),
+				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</aside>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
+        );
     
 	}
 } 

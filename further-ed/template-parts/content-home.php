@@ -152,6 +152,43 @@
         <div class="max-width">
             <h2><?php $headingPartners = get_field( 'heading-partners' ); ?> <?php if($headingPartners) {_e($headingPartners);} ?></h2>
         </div>
+        <div class="course-container max-width">
+            <?php
+             
+             $partnerargs = array(
+                'post_type' => 'partners',
+                'posts_per_page' => 8,
+                'orderby' => 'date',
+                'order' => 'ASC'
+            
+             );
+             $the_query_partners = new WP_Query($partnerargs);
+             ?>
+             <?php if($the_query_partners->have_posts() ):  ?>
+             <?php while ($the_query_partners->have_posts() ): $the_query_partners->the_post(); ?>
+             <div class="course card partner-image">
+             <?php 
+            
+            $partnerimage = get_field('partner-image');?>
+        
+            <?php if($partnerimage) :  ?>  
+            
+    
+                <a href="<?php echo $partnerimage['link'] ?>"><img src = "<?php echo $partnerimage['image']; ?>"/></a>  
+    
+            <?php endif; ?>
+    
+    
+            </div>
+
+             <?php endwhile; ?>
+             
+             <?php wp_reset_postdata(); ?>
+             <?php else :?>
+             <p><?php _e('Sorry, no posts matched your criteria') ?></p>
+            <?php endif; ?>  
+        </div>
+
     </section>
 
 </article>
