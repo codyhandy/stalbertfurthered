@@ -39,9 +39,11 @@
 
             <a class="card course" href="<?php echo (get_category_link( $category->term_id )) ?>">
                 <div class="category-content">
-                    <!-- <img src="<php echo z_taxonomy_image_url($category->term_id); ?>" alt="Category Image"> -->
                     <div class="card-bg" style="background: url(<?php echo z_taxonomy_image_url($category->term_id); ?>); no-repeat 50% 50%; background-size: cover;"></div>
                     <h3><?php echo ($category->name) ?></h3>
+                    <?php if(category_description( $category->term_id )){
+                        echo category_description( $category->term_id );
+                    } ?>
                 </div>
             </a>
             <?php } ?>
