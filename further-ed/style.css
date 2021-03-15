@@ -460,7 +460,7 @@ footer .column:nth-of-type(2) ul li hr {
   border: 1px solid #b7b7b7;
 }
 
-/* CONTACT PAGES  */
+/* CONTACT PAGE  */
 .form{
   background-color: #F3F3F3;
   padding: 2rem 0;
@@ -485,6 +485,19 @@ footer .column:nth-of-type(2) ul li hr {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* STAR LITERACY PAGE  */
+.star-container{
+  text-align: center;
+  margin: 4rem 0;
+}
+.hours{
+  text-align: center;
+}
+.section-one-star p{
+ padding-bottom: 3rem;
+}
+
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
@@ -617,7 +630,7 @@ footer .column:nth-of-type(2) ul li hr {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* CONTACT PAGES  */
+/* CONTACT PAGE  */
 .form{
   padding: 2rem;
   margin: 1rem;
@@ -628,6 +641,30 @@ footer .column:nth-of-type(2) ul li hr {
 /* .contact-container{
   flex-direction: row;
 } */
+
+/* STAR LITERACY PAGE  */
+.section-one-star{
+  display: flex;
+  margin: 0 1rem;
+ }
+ .section-two-star{
+  display: flex;
+  margin: 0 1rem;
+ }
+ .star-one-img{
+   margin: 10rem 1rem;
+   width: 50%;
+ }
+ .star-two-img{
+   margin: 1rem;
+   width: 50%;
+ }
+ .star-container{
+   text-align: left;
+ }
+ .star-container h2{
+   text-align: left;
+ }
 
 /* desktop version  */
 @media (min-width: 1150px) {
@@ -661,6 +698,14 @@ footer .column:nth-of-type(2) ul li hr {
   /* COURSES  */
   .course-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* STAR LITERACY PAGE  */
+  .star-one-img{
+    width: 150%;
+  }
+  .star-two-img{
+    width: 100%;
   }
 }
 

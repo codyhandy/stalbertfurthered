@@ -25,7 +25,7 @@
             <?php if($alternateone) :  ?>   
     
                 
-                <div class = "text-container">   
+                <div class = "star-container">   
                  
                 <h2><?php _e($alternateone['title']); ?></h2>
 
@@ -33,20 +33,20 @@
                 
                 </div>
                 
-                <img src = "<?php echo $alternateone['photo'] ?>"/>
+                <img class="mobile-hidden star-one-img" src = "<?php echo $alternateone['photo'] ?>"/>
                 <?php endif; ?>
         </div>
 
-        <div class="secton-two-star">
+        <div class="section-two-star">
             <?php 
             
             $alternatetwo = get_field('alternate-two')?>
         
             <?php if($alternatetwo) :  ?>   
 
-                <img src = "<?php echo $alternatetwo['photo'] ?>"/>
+                <img class="mobile-hidden star-two-img" src = "<?php echo $alternatetwo['photo'] ?>"/>
 
-                <div class = "text-container">   
+                <div class = "star-container">   
                  
                 <h2><?php _e($alternatetwo['title']); ?></h2>
 
