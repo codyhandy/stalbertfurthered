@@ -27,8 +27,8 @@ get_header();
 </div>
        
 
-<div class="service-container max-width flex">
-    <div class="entry-content text-left">
+<div class="service-container max-width lg-flex">
+    <div class="entry-content text-left single-service">
      <?php the_content(); ?>
      </div>
      
