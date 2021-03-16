@@ -27,7 +27,7 @@ esc_html__( 'Search Results for %s', 'further-ed'),
 <!-- end while loop --> 
  <?php else : ?>
 <!-- send to search page / some other general page with search function, tags, categories, archives,etc.. -->
-<?php get_template_part('template-parts/content', 'none'); ?>
+<?php  get_template_part( 404 ); ?>
 <?php endif; ?>
 <!-- This is where you would add pagination. Pagination in a search result page is smart idea, especially if your search
 returns a lot of results.-->

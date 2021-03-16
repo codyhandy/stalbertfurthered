@@ -1,57 +1,119 @@
 <?php
 /***
-* The template for displaying a 404 page.
-*
-* @package further-ed
-* @since 1.0.0
+ * The template for displaying a 404 page.
+ *
+ * @package further-ed
+ * @since 1.0.0
 */
 //display header
 get_header();
 ?>
-<main class="site-main" id="main">
-<section class="error-404 not-found">
-<header>
-<h1 class="page-title">
-<?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'theme name here' ); ?>
-</h1>
-</header>
 
-<div class="page-content">
-<p>
-<?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the
-links below or a search?', 'theme name here' ); ?>
-</p>
-<!-- display the search form -->
-<?php get_search_form(); ?>
-<!-- recent posts -->
-<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-<!-- display categories -->
-<div class="widget widget_categories">
-<h2 class="widget-title">
-<?php esc_html_e( 'Most Used Categories', 'theme name here' ); ?>
-</h2>
+<div class="banner" style="background: url('http://further-ed.web.dmitcapstone.ca/further-ed/wp-content/uploads/2021/03/richard-dykes-SPuHHjbSso8-unsplash.jpg') no-repeat 50% 50%; background-size: cover;">
+                    <div class="opacity">
+                        <div class="banner-text max-width">
 
- <ul>
- <?php wp_list_categories(
- array(
- 'orderby' => 'count',
- 'order' => 'DESC',
- 'show_count' => 1,
- 'title_li' => '',
- 'number' => 10,
- ) //end of array
- ); ?> 
- </ul>
+                        <h1>Oops! That page can’t be found.</h1>
+                        <p>
+                        It looks like nothing was found at this location. Maybe try one of the links below or a search?
+                        </p>
+                         <?php get_search_form(); ?>   
+                        </div>
+                    
+                    </div>
 </div>
 
-<!-- Monthly Archives -->
-<?php
- //translators: %1$s: smiley
- $archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s',
-'theme name here' ), convert_smilies( ':)' ) ) . '</p>';
- the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=$archive_content" );
- ?>
-</div> <!-- //page content -->
-</section>
-</main>
+
+<div class="page-content">
+
+    
+
+    <?php
+
+    $serviceargs = array(
+        'post_type' => 'services',
+        'posts_per_page' => 3,
+        'orderby' => 'date',
+        'order' => 'ASC'
+
+    );
+    //new WP_Query object saved as the variable $the_query.
+    $the_service_query = new WP_Query($serviceargs);
+
+    ?>
+    <h2>Services</h2>
+     <?php if ($the_service_query->have_posts()): ?>
+          <section>
+                <div class="card-container">   
+                        <?php while ($the_service_query->have_posts()):
+            $the_service_query->the_post(); ?>
+                            <div class="card services">
+                                <?php if ($serviceIcon = get_field('service-icon')): ?>
+                                    <div class="icon"><?php the_field('service-icon'); ?></div>
+                                <?php
+            endif; ?>
+                                <h3><?php $serviceHeading = get_field('service-heading'); ?> <?php if ($serviceHeading)
+            {
+                _e($serviceHeading);
+            } ?></h3>
+                                <button class="btn"><a href="<?php the_permalink(); ?>">View More</a></button>
+                            </div>
+                        <?php
+        endwhile; ?>
+                    <?php wp_reset_postdata(); ?>
+                <?php
+        endif; ?>
+                </div>
+          </section>
+    <h2>Course Categories</h2>
+    <?php
+    //creates the query to fetch the categories
+    //parameters display the categories sorted by name.
+    $args = array(
+        'orderby' => 'name',
+        'order' => 'ASC',
+        'parent' => 0
+    );
+
+    // removes the "uncategorized" category from the array
+    $uncategorized = get_categories(array(
+        'slug' => 'uncategorized'
+    ));
+    if ($uncategorized)
+    {
+        $excluded_id = array();
+
+        foreach ($uncategorized as $category)
+        {
+            $excluded_id[] = $category->term_id;
+        }
+        $args['exclude'] = $excluded_id;
+    }
+
+    // loads all categories into the array
+    $categories = get_categories($args);
+    ?>
+
+        <section>
+            <div class="max-width">
+            <div class="course-container">
+                <?php foreach ($categories as $category)
+    { ?>
+
+                <a class="card course" href="<?php echo (get_category_link($category->term_id)) ?>">
+                    <div class="category-content">
+                        <div class="card-bg" style="background: url(<?php echo z_taxonomy_image_url($category->term_id); ?>); no-repeat 50% 50%; background-size: cover;"></div>
+                        <h3><?php echo ($category->name) ?></h3>
+                        <?php if (category_description($category->term_id))
+        {
+            echo category_description($category->term_id);
+        } ?>
+                    </div>
+                </a>
+                <?php
+    } ?>
+            </div> <!-- end of the course container -->
+            </div>
+        </section>
+</div>
 <?php get_footer(); ?>
