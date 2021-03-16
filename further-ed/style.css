@@ -530,9 +530,22 @@ footer .column:nth-of-type(2) ul li hr {
 }
 .hours{
   text-align: center;
+  margin-bottom: 4rem;
 }
 .section-one-star p{
  padding-bottom: 3rem;
+}
+
+/* BOOK A ROOM PAGE  */
+.service-container{
+  flex-wrap: wrap;
+}
+.single-service{
+  margin: 4rem 0;
+}
+
+input, textarea{
+  width: 100%;
 }
 
 /* **** MEDIA QUERIES ****  */
@@ -688,6 +701,10 @@ footer .column:nth-of-type(2) ul li hr {
   padding: 2rem;
   margin: 1rem;
 }
+.form p {
+  padding: 0; 
+}
+
 .contact{
   padding: 2rem;
 }
@@ -698,26 +715,31 @@ footer .column:nth-of-type(2) ul li hr {
 /* STAR LITERACY PAGE  */
 .section-one-star{
   display: flex;
-  margin: 0 1rem;
  }
  .section-two-star{
   display: flex;
-  margin: 0 1rem;
  }
  .star-one-img{
-   margin: 10rem 1rem;
-   width: 50%;
+   margin: 10rem 1rem 4rem 1rem;
  }
  .star-two-img{
-   margin: 1rem;
-   width: 50%;
+   margin: 1rem 1rem 4rem 1rem;
  }
  .star-container{
    text-align: left;
+   padding: 0 2rem;
  }
  .star-container h2{
    text-align: left;
  }
+
+ /* BOOK A ROOM PAGE  */
+.service-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
 
 /* desktop version  */
 @media (min-width: 1150px) {
@@ -755,10 +777,12 @@ footer .column:nth-of-type(2) ul li hr {
 
   /* STAR LITERACY PAGE  */
   .star-one-img{
-    width: 150%;
+    width: 625px;
+    height: 450px;
   }
   .star-two-img{
-    width: 100%;
+   width: 625px;
+   height: 450px;
   }
 }
 
