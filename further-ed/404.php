@@ -24,7 +24,7 @@ get_header();
 </div>
 
 
-<div class="page-content">
+<div class="page-content max-width">
 
     
 

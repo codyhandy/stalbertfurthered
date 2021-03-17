@@ -160,8 +160,8 @@ a:active {
   margin: 1rem auto;
 }
 
-.btn-red{
-  background-color: #96302B;
+.btn-red {
+  background-color: #96302b;
   color: #fff;
   padding: 0;
   width: 15rem;
@@ -212,30 +212,29 @@ a:active {
 
 /* search form styling */
 .search-bar {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border: 2px solid var(--blue);
   color: var(--dark);
   text-align: center;
   width: 30rem;
-  background-color:#f3f8f6a8;
+  background-color: #f3f8f6a8;
 }
-.search-bar input{
-  width:90%;
-  border:none;
-  background-color:transparent;
+.search-bar input {
+  width: 90%;
+  border: none;
+  background-color: transparent;
   padding: 0.5rem;
 }
 .search-bar > button {
-  margin:0;
-  border:none;
-  background-color:transparent;
+  margin: 0;
+  border: none;
+  background-color: transparent;
 }
-::placeholder{
-  color:var(--dark);
+::placeholder {
+  color: var(--dark);
 }
-
 
 /* **** HEADER ****  */
 header {
@@ -287,7 +286,8 @@ nav {
   color: var(--off-white);
 }
 
-.main-menu li a:active {
+.main-menu li a:active,
+.main-menu li a:hover {
   background-color: var(--blue);
 }
 
@@ -300,7 +300,7 @@ nav {
   top: 0;
   left: -25rem;
   width: 25rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   transition: 0.75s;
   text-transform: uppercase;
   padding-top: 5rem;
@@ -309,6 +309,31 @@ nav {
 .show-nav {
   left: 0;
 }
+
+.sub-menu {
+  display: none;
+  /* background-color: var(--off-white);
+  position: absolute;
+  top: 5rem;
+  z-index: 15;
+  width: 20rem;
+  padding: 1rem 1rem 1rem 1rem; */
+}
+/* .sub-menu a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  text-transform: lowercase;
+}
+
+.menu-item {
+  transition: all 0.5s ease-out;
+  position: relative;
+}
+
+.menu-item:hover .sub-menu {
+  display: block;
+} */
 
 /* adds a dark bluish layer over top of the banner to make text mor legible  */
 .banner > .opacity {
@@ -373,19 +398,19 @@ section.featured {
   padding-top: 2rem;
 }
 .footer-lower-colors {
-  background-color:#101111;
+  background-color: #101111;
   color: var(--off-white);
-  padding:1rem;
+  padding: 1rem;
 }
 
-.footer-grid, .footer-lower-grid {
+.footer-grid,
+.footer-lower-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
   align-items: center;
   justify-items: center;
 }
-
 
 .menu-footer-menu-container ul {
   display: grid;
@@ -438,9 +463,17 @@ footer .column:nth-of-type(2) ul li hr {
 .footer-nav {
   text-align: center;
 }
-.footer-lower-grid .column:first-of-type{text-align:center;}
-.footer-lower-grid .column:nth-of-type(2) ul li a{color:#666; font-size:50px; margin: 0 1rem 0 1rem;}
-.footer-lower-grid .column:nth-of-type(2) ul li a:hover{color:var(--light-blue);}
+.footer-lower-grid .column:first-of-type {
+  text-align: center;
+}
+.footer-lower-grid .column:nth-of-type(2) ul li a {
+  color: #666;
+  font-size: 50px;
+  margin: 0 1rem 0 1rem;
+}
+.footer-lower-grid .column:nth-of-type(2) ul li a:hover {
+  color: var(--light-blue);
+}
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 
 /* **** ABOUT PAGE ****  */
@@ -481,8 +514,8 @@ footer .column:nth-of-type(2) ul li hr {
 
 /* COURSE PAGES  */
 .card-bg {
-  height: 30rem; 
-  width: 100%; 
+  height: 30rem;
+  width: 100%;
   background-position: center;
 }
 
@@ -498,53 +531,54 @@ footer .column:nth-of-type(2) ul li hr {
 }
 
 /* CONTACT PAGE  */
-.form{
-  background-color: #F3F3F3;
+.form {
+  background-color: #f3f3f3;
   padding: 2rem 0;
   margin-bottom: 2rem;
 }
-.form p{
+.form p {
   margin-bottom: 2rem;
 }
-.wpcf7-submit{
-  background-color: #96302B;
+.wpcf7-submit {
+  background-color: #96302b;
   color: #fff;
   border: none;
   padding: 0;
   width: 15rem;
   margin: 1rem auto;
 }
-.contact p{
+.contact p {
   text-align: center;
   margin: 2rem 0;
 }
-.contact-container{
+.contact-container {
   display: flex;
   flex-wrap: wrap;
 }
 
 /* STAR LITERACY PAGE  */
-.star-container{
+.star-container {
   text-align: center;
   margin: 4rem 0;
 }
-.hours{
+.hours {
   text-align: center;
   margin-bottom: 4rem;
 }
-.section-one-star p{
- padding-bottom: 3rem;
+.section-one-star p {
+  padding-bottom: 3rem;
 }
 
 /* BOOK A ROOM PAGE  */
-.service-container{
+.service-container {
   flex-wrap: wrap;
 }
-.single-service{
+.single-service {
   margin: 4rem 0;
 }
 
-input, textarea{
+input,
+textarea {
   width: 100%;
 }
 
@@ -598,7 +632,7 @@ input, textarea{
     color: var(--dark);
   }
 
-  .main-menu li:hover a {
+  .main-menu li:hover > a {
     color: var(--blue);
     text-decoration: underline;
     cursor: pointer;
@@ -653,7 +687,9 @@ input, textarea{
     align-items: center;
     justify-items: center;
   }
-  .footer-lower-grid .column:first-of-type{text-align:left;}
+  .footer-lower-grid .column:first-of-type {
+    text-align: left;
+  }
   .menu-footer-menu-container ul {
     grid-template-columns: 1fr;
     margin-top: -15rem;
@@ -671,9 +707,9 @@ input, textarea{
     /* the above will change to repeat(pixel size, auto) as we style so that this is the same no matter which column and auto adjusts to fit columns as necessary */
   }
 
-  .staff-card-deck > .course.card:hover{
-    background-color:var(--red);
-    color:var(--off-white);
+  .staff-card-deck > .course.card:hover {
+    background-color: var(--red);
+    color: var(--off-white);
   }
 
   .about-entry-content {
@@ -681,15 +717,14 @@ input, textarea{
     padding: 6rem;
   }
 
-  .executives-grid{
+  .executives-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .executives-grid div ul li{
+  .executives-grid div ul li {
     margin: 1rem 0;
   }
-  
 
   /* COURSES  */
   .course-container {
@@ -697,15 +732,15 @@ input, textarea{
   }
 }
 /* CONTACT PAGE  */
-.form{
+.form {
   padding: 2rem;
   margin: 1rem;
 }
 .form p {
-  padding: 0; 
+  padding: 0;
 }
 
-.contact{
+.contact {
   padding: 2rem;
 }
 /* .contact-container{
@@ -713,28 +748,28 @@ input, textarea{
 } */
 
 /* STAR LITERACY PAGE  */
-.section-one-star{
+.section-one-star {
   display: flex;
- }
- .section-two-star{
+}
+.section-two-star {
   display: flex;
- }
- .star-one-img{
-   margin: 10rem 1rem 4rem 1rem;
- }
- .star-two-img{
-   margin: 1rem 1rem 4rem 1rem;
- }
- .star-container{
-   text-align: left;
-   padding: 0 2rem;
- }
- .star-container h2{
-   text-align: left;
- }
+}
+.star-one-img {
+  margin: 10rem 1rem 4rem 1rem;
+}
+.star-two-img {
+  margin: 1rem 1rem 4rem 1rem;
+}
+.star-container {
+  text-align: left;
+  padding: 0 2rem;
+}
+.star-container h2 {
+  text-align: left;
+}
 
- /* BOOK A ROOM PAGE  */
-.service-container{
+/* BOOK A ROOM PAGE  */
+.service-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -751,6 +786,9 @@ input, textarea{
     align-items: center;
     padding: 0;
     border-right: none;
+  }
+  .sub-menu {
+    background-color: #f3f8f6c9;
   }
 
   .footer-grid {
@@ -776,13 +814,13 @@ input, textarea{
   }
 
   /* STAR LITERACY PAGE  */
-  .star-one-img{
+  .star-one-img {
     width: 625px;
     height: 450px;
   }
-  .star-two-img{
-   width: 625px;
-   height: 450px;
+  .star-two-img {
+    width: 625px;
+    height: 450px;
   }
 }
 
