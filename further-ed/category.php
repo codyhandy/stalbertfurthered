@@ -52,7 +52,7 @@ get_header();
         </div>
     </div>
 
-    <div class="max-width">
+    <div class="max-width indv-courses">
         <?php foreach($categories as $category) { ?>
             <h2><?php echo ($category->name) ?></h2>
             <!-- add the code to loop through the posts of the specific sub category -->
@@ -65,13 +65,14 @@ get_header();
                 //new WP_Query object saved as the variable $the_query.
                 $the_course_query = new WP_Query( $args1 );
             ?>
-            <div class="course-container">
+            <div class="course-container single">
                 <?php while ( $the_course_query->have_posts() ) : $the_course_query->the_post(); ?>
                     <div class="card course">
                         <h3><?php the_title(); ?></h3>
                         <?php if($courseDesc = get_field( 'course-desc' )): ?>
                             <p><?php the_field('course-desc'); ?></p>
                         <?php endif; ?>
+                        <!-- change here to intead display the_content -->
 
                         <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
                     </div>    

@@ -151,6 +151,12 @@ a:active {
   display: none;
 }
 
+/* makes the text for the applied section stand out  */
+.hi-lighted {
+  color: var(--red);
+  font-weight: bold;
+}
+
 /* BASE BUTTON STYLING */
 .btn {
   background-color: transparent;
@@ -508,8 +514,24 @@ footer .column:nth-of-type(2) ul li hr {
 }
 
 /* CATEGORY PAGE */
-.category-content > img {
-  height: 30rem;
+.category-content > p {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.indv-courses {
+  margin-bottom: 4rem;
+}
+
+.indv-courses h2 {
+  margin-top: 4rem;
+}
+
+.indv-courses h3 {
+  margin-bottom: 2rem;
+}
+
+.indv-courses .card {
+  padding: 2rem;
 }
 
 /* COURSE PAGES  */
@@ -519,6 +541,31 @@ footer .column:nth-of-type(2) ul li hr {
   background-position: center;
 }
 
+/* overlay that appears when hovering a course card  */
+.card-bg .overlay {
+  width: 100%;
+  height: 0;
+  transition: 0.5s;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 2.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card:hover .overlay {
+  height: 100%;
+}
+.card-bg .overlay p {
+  display: none;
+}
+.card:hover .overlay p {
+  display: block;
+}
+
+
 .course-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -526,9 +573,24 @@ footer .column:nth-of-type(2) ul li hr {
   padding: 0 2rem;
 }
 
+.course-container.single > .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card.course {
   border: 1px solid #b7b7b7;
 }
+
+.waitlist p:last-of-type {
+  margin-top: 2rem;
+}
+
+.waitlist .btn {
+  width: auto;
+}
+
 
 /* CONTACT PAGE  */
 .form {
@@ -634,6 +696,7 @@ textarea {
 
   .main-menu li:hover > a {
     color: var(--blue);
+    background-color: var(--off-white);
     text-decoration: underline;
     cursor: pointer;
   }
@@ -812,6 +875,10 @@ textarea {
   .course-container {
     grid-template-columns: repeat(4, 1fr);
   }
+  /* this container hold the individual courses instead of the categories  */
+  .course-container.single {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   /* STAR LITERACY PAGE  */
   .star-one-img {
@@ -824,6 +891,9 @@ textarea {
   }
 }
 
-/* desktop version  */
-@media (min-width: 1400px) {
+/* desktop version  / when content hits the max-width */
+@media (min-width: 1300px) {
+  .course-container {
+    padding: 0;
+  }
 }
