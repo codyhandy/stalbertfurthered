@@ -362,7 +362,7 @@ section.featured {
 }
 
 .section2 {
-  background-color: var(--off-white);
+  background-color: #dadada;
 }
 .section2 p {
   text-align: center;
@@ -572,7 +572,7 @@ footer .column:nth-of-type(2) ul li hr {
 
 /* CONTACT PAGE  */
 .form {
-  background-color: #f3f3f3;
+  background-color: #cacaca;
   padding: 2rem 0;
   margin-bottom: 2rem;
 }
