@@ -69,12 +69,25 @@ get_header();
                 <?php while ( $the_course_query->have_posts() ) : $the_course_query->the_post(); ?>
                     <div class="card course">
                         <h3><?php the_title(); ?></h3>
-                        <?php if($courseDesc = get_field( 'course-desc' )): ?>
-                            <p><?php the_field('course-desc'); ?></p>
-                        <?php endif; ?>
-                        <!-- change here to intead display the_content -->
 
-                        <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
+                        <!-- <php if($courseDesc = get_field( 'course-desc' )): ?>
+                            <p><php the_field('course-desc'); ?></p>
+                        <php endif; ?> -->
+
+                        <?php the_excerpt(); ?>
+                        
+                        <!-- checks if the course if from a third party, if it is displays call/email info instead of learn more  -->
+                        <?php if($thirdParty = get_field( 'is-third-party' )): ?>
+                            <div>
+                                <?php if($url = get_field( 'url' )): ?>
+                                    <button class="btn"><a href="<?php the_field( 'url' ); ?>">Visit Site</a></button>
+                                <?php endif; ?>
+                            </div>
+                            
+                        <?php else: ?>
+                            <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
+                        <?php endif; ?>
+                        
                     </div>    
                 <?php endwhile; ?>
             </div>
