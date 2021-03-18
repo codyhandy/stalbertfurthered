@@ -102,7 +102,11 @@ get_header();
 
                 <a class="card course" href="<?php echo (get_category_link($category->term_id)) ?>">
                     <div class="category-content">
-                        <div class="card-bg" style="background: url(<?php echo z_taxonomy_image_url($category->term_id); ?>); no-repeat 50% 50%; background-size: cover;"></div>
+                        <div class="card-bg" style="background: url(<?php echo z_taxonomy_image_url($category->term_id); ?>); no-repeat 50% 50%; background-size: cover;">
+                            <div class="overlay">
+                                <p>Learn More</p>
+                            </div>
+                        </div>
                         <h3><?php echo ($category->name) ?></h3>
                         <?php if (category_description($category->term_id))
         {
