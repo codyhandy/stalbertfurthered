@@ -590,10 +590,20 @@ footer .column:nth-of-type(2) ul li hr {
 .contact p {
   text-align: center;
   margin: 2rem 0;
+  padding: 0;
 }
 .contact-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem 0;
+}
+.contact{
+  width: 95%;
+}
+  /* MAP */
+iframe{
+  width: 95%;
 }
 
 /* STAR LITERACY PAGE  */
@@ -602,6 +612,10 @@ footer .column:nth-of-type(2) ul li hr {
   margin: 4rem 0;
 }
 .hours {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.star-contact{
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -801,51 +815,65 @@ textarea {
   .course-container {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-/* CONTACT PAGE  */
-.form {
-  padding: 2rem;
-  margin: 1rem;
-}
-.form p {
-  padding: 0;
-}
 
-.contact {
-  padding: 2rem;
-}
-/* .contact-container{
-  flex-direction: row;
-} */
+  /* CONTACT PAGE  */
+  .form {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  .form p {
+    padding: 0;
+  }
 
-/* STAR LITERACY PAGE  */
-.section-one-star {
-  display: flex;
-}
-.section-two-star {
-  display: flex;
-}
-.star-one-img {
-  margin: 10rem 1rem 4rem 1rem;
-}
-.star-two-img {
-  margin: 1rem 1rem 4rem 1rem;
-}
-.star-container {
-  text-align: left;
-  padding: 0 2rem;
-}
-.star-container h2 {
-  text-align: left;
-}
+  .contact {
+    padding: 2rem 0;
+    width: 388px;
+  }
+  .contact-container{
+    margin: auto;
+    justify-content: center;
+  }
 
-/* BOOK A ROOM PAGE  */
-.service-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-}
+  /* STAR LITERACY PAGE  */
+  .section-one-star {
+    display: flex;
+  }
+  .section-two-star {
+    display: flex;
+  }
+  .star-one-img {
+    margin: 10rem 1rem 4rem 1rem;
+  }
+  .star-two-img {
+    margin: 1rem 1rem 4rem 1rem;
+  }
+  .star-container {
+    text-align: left;
+    padding: 0 2rem;
+  }
+  .star-container h2 {
+    text-align: left;
+  }
+  .section-three-star{
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+  }
+  .star-contact{
+    padding: 0 1.5rem;
+  }
+  .hours{
+    padding: 0 1.5rem;
+  }
+
+  /* BOOK A ROOM PAGE  */
+  .service-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
+ }/* END OF MEDIA QUERY */
 
 /* desktop version  */
 @media (min-width: 1150px) {

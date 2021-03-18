@@ -60,8 +60,8 @@
                 <?php endif; ?>
         </div>
 
-        <div class="section-three">
-        <div class="contact"><?php the_field('contact'); ?></div>
+        <div class="section-three-star">
+        <div class="star-contact"><?php the_field('contact'); ?></div>
         <div class="hours"><?php the_field('hours'); ?></div>
         </div>
             
