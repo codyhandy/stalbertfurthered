@@ -35,6 +35,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
+  background-color: var(--off-white);
 }
 
 /* text padding while in mobile view  */
@@ -318,28 +319,7 @@ nav {
 
 .sub-menu {
   display: none;
-  /* background-color: var(--off-white);
-  position: absolute;
-  top: 5rem;
-  z-index: 15;
-  width: 20rem;
-  padding: 1rem 1rem 1rem 1rem; */
 }
-/* .sub-menu a {
-  color: var(--dark);
-  text-decoration: none;
-  font-size: clamp(1.2rem, 3vw, 1.6rem);
-  text-transform: lowercase;
-}
-
-.menu-item {
-  transition: all 0.5s ease-out;
-  position: relative;
-}
-
-.menu-item:hover .sub-menu {
-  display: block;
-} */
 
 /* adds a dark bluish layer over top of the banner to make text mor legible  */
 .banner > .opacity {
@@ -565,7 +545,6 @@ footer .column:nth-of-type(2) ul li hr {
   display: block;
 }
 
-
 .course-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -590,7 +569,6 @@ footer .column:nth-of-type(2) ul li hr {
 .waitlist .btn {
   width: auto;
 }
-
 
 /* CONTACT PAGE  */
 .form {
@@ -694,7 +672,7 @@ textarea {
     color: var(--dark);
   }
 
-  .main-menu li:hover > a {
+  .main-menu > li:hover > a {
     color: var(--blue);
     background-color: var(--off-white);
     text-decoration: underline;
@@ -707,6 +685,36 @@ textarea {
 
   .menu-main-menu-container {
     width: 70%;
+  }
+
+  .sub-menu {
+    display: none;
+    background-color: var(--off-white);
+    position: absolute;
+    top: 5rem;
+    z-index: 15;
+    width: 20rem;
+    padding: 1rem 1rem 1rem 1rem;
+  }
+  .sub-menu a {
+    color: var(--dark);
+    text-decoration: none;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    text-transform: lowercase;
+  }
+
+  .sub-menu li a:hover {
+    background-color: transparent;
+    color: var(--blue);
+  }
+
+  .menu-item {
+    transition: all 0.5s ease-out;
+    position: relative;
+  }
+
+  .menu-item:hover .sub-menu {
+    display: block;
   }
 
   /* HOMEPAGE */
