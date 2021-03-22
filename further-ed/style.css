@@ -133,6 +133,9 @@ a:active {
 .text-left {
   text-align: left;
 }
+.text-right{
+ text-align: right;
+}
 
 /* three column grid - responsive to screen sizes */
 .three-column-grid {
@@ -666,12 +669,29 @@ iframe {
   padding-bottom: 3rem;
 }
 
-/* BOOK A ROOM PAGE  */
+/* BOOK A ROOM PAGE & EXAM PROCTORING & MEMBERSHIP */
 .service-container {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem 0;
 }
 .single-service {
   margin: 4rem 0;
+  text-align: center;
+}
+.single-service ul{
+  padding-left: 1rem;
+  color: #666;
+}
+.single-service ul li{
+  padding: 0.5rem 0;
+}
+.form h2{
+  text-align: left;
+}
+.memberships{
+  padding-top: 2rem;
 }
 
 input,
@@ -919,12 +939,22 @@ textarea {
     padding: 0 1.5rem;
   }
 
-  /* BOOK A ROOM PAGE  */
+  /* BOOK A ROOM PAGE & EXAM PROCTORING & MEMBERSHIP  */
   .service-container {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
+  }
+  .single-service{
+    max-width: 45%;
+    text-align: left;
+  }
+  .single-service h2{
+    text-align: left;
+  }
+  .service-container .form{
+    width: 45%;
   }
 } /* END OF MEDIA QUERY */
 
@@ -977,6 +1007,15 @@ textarea {
   .star-two-img {
     width: 625px;
     height: 450px;
+  }
+  
+  /* BOOK A ROOM PAGE  & EXAM PROCTORING & MEMBERSHIP */
+  .service-container {
+    margin: auto;
+    justify-content: center;
+  }
+  .single-service{
+    padding: 2rem 4rem;
   }
 }
 
