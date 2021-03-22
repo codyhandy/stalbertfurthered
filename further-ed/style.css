@@ -330,7 +330,38 @@ nav {
 }
 
 .sub-menu {
-  display: none;
+  /* display: none;
+  background-color: var(--dark);
+  position: absolute;
+  top: 5rem;
+  z-index: 15;
+  width: 20rem;
+  padding: 1rem 1rem 1rem 1rem; */
+
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+.sub-menu a {
+  background-color: #353034;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  text-transform: lowercase;
+}
+
+.sub-menu li a:hover {
+  background-color: var(--blue);
+  color: var(--off-white);
+}
+
+.menu-item {
+  transition: all 0.5s ease-out;
+  position: relative;
+}
+
+.active > .sub-menu {
+  height: auto;
 }
 
 /* adds a dark bluish layer over top of the banner to make text mor legible  */
@@ -713,16 +744,26 @@ textarea {
     width: 70%;
   }
 
+  .menu-item-has-children:before {
+    right: -10px;
+    line-height: 72px;
+    color: var(--dark);
+  }
+
   .sub-menu {
     display: none;
-    background-color: var(--off-white);
+    background-color: var(--dark);
     position: absolute;
     top: 5rem;
     z-index: 15;
     width: 20rem;
     padding: 1rem 1rem 1rem 1rem;
+    height: auto;
+    overflow: visible;
+    transition: all 0.5s ease-out;
   }
   .sub-menu a {
+    background-color: transparent;
     color: var(--dark);
     text-decoration: none;
     font-size: clamp(1.2rem, 3vw, 1.6rem);
@@ -739,7 +780,7 @@ textarea {
     position: relative;
   }
 
-  .menu-item:hover .sub-menu {
+  .active > .sub-menu {
     display: block;
   }
 

@@ -10,11 +10,14 @@ window.onload=function(){
     
   });
 
-  // childButton.addEventListener('click', ()=>{
-  //   document.querySelector('.menu-item-has-children').classList.toggle('active');
-  //   document.querySelector('.menu-item-276').siblings.removeClass('active');
-    
-  // });
+  var $j = jQuery.noConflict();
+
+ $j(function() {
+    $j('ul li').click(function() {
+        $j(this).siblings().removeClass('active');
+        $j(this).toggleClass('active');
+    })
+})
  
      
 
