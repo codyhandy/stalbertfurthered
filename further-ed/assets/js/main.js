@@ -1,12 +1,24 @@
 
 window.onload=function(){
     const clickButton = document.querySelector('.mobile-btn');
+    // const childButton = document.querySelector('.menu-item-276');
+
 
   clickButton.addEventListener('click', ()=>{
     document.querySelector('.main-menu').classList.toggle('show-nav');
     clickButton.classList.toggle('open');
-
+    
   });
+
+  // childButton.addEventListener('click', ()=>{
+  //   document.querySelector('.menu-item-has-children').classList.toggle('active');
+  //   document.querySelector('.menu-item-276').siblings.removeClass('active');
+    
+  // });
+ 
+     
+
+ 
 
 // let scrollBtn = document.querySelector('.scroll-btn');
 
