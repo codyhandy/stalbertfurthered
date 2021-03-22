@@ -27,9 +27,10 @@ get_header();
     </div>
 
     <div class="max-width">
-        <?php if($courseDesc = get_field( 'course-desc' )): ?>
-            <p><?php the_field('course-desc'); ?></p>
-        <?php endif; ?>
+        <?php the_content(); ?>
+        <!-- <php if($courseDesc = get_field( 'course-desc' )): ?>
+            <p><php the_field('course-desc'); ?></p>
+        <php endif; ?> -->
 
         <?php if($instructor = get_field( 'course-instructor' )): ?>
             <p><strong>Instructor:</strong> <?php the_field('course-instructor'); ?></p>

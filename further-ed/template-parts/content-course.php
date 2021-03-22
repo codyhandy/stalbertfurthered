@@ -12,6 +12,7 @@
         //creates the query to fetch the categories
         //parameters display the categories sorted by name.
         $args = array(
+            'taxonomy' => 'espresso_event_categories', // use this line for using the espresso events instead
             'orderby' => 'name',
             'order' => 'ASC',
             'parent' => 0
