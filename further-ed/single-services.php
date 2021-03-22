@@ -28,7 +28,7 @@ get_header();
        
 
 <div class="service-container max-width lg-flex">
-    <div class="entry-content text-left single-service">
+    <div class="entry-content single-service">
      <?php the_content(); ?>
      </div>
      
