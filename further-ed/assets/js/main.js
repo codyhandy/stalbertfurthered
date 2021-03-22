@@ -11,7 +11,6 @@ window.onload=function(){
   });
 
   var $j = jQuery.noConflict();
-
  $j(function() {
     $j('ul li').click(function() {
         $j(this).siblings().removeClass('active');
