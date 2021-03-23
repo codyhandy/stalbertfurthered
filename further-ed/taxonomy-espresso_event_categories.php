@@ -71,11 +71,7 @@ get_header();
                     <div class="card course">
                         <h3><?php the_title(); ?></h3>
 
-                        <?php if($url = get_field( 'excerpt' )): ?>
-                            <p><?php the_field('excerpt')  ?></p>
-                        <?php endif; ?>
-
-                        <?php the_excerpt(); ?>
+                        <?php echo get_the_excerpt(); ?>
                         
                         <!-- checks if the course if from a third party, if it is displays call/email info instead of learn more  -->
                         <?php if($thirdParty = get_field( 'is-third-party' )): ?>
