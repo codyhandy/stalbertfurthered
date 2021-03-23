@@ -703,6 +703,13 @@ textarea {
   width: 100%;
 }
 
+/* SEARCH PAGE */
+.search p{
+  padding: 0 1rem;
+}
+.entry-title a{
+  padding-top: 6rem;
+}
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
@@ -717,6 +724,9 @@ textarea {
   }
   .banner-text > p {
     max-width: 50%;
+  }
+  .banner-text{
+    padding-left: 2rem;
   }
 
   /* HELPER CLASSES  */
