@@ -513,6 +513,8 @@ footer .column:nth-of-type(2) ul li hr {
 .footer-lower-grid .column:nth-of-type(2) ul li a:hover {
   color: var(--light-blue);
 }
+
+
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 
 /* **** ABOUT PAGE ****  */
@@ -545,6 +547,7 @@ footer .column:nth-of-type(2) ul li hr {
 .partners ul {
   margin-bottom: 2rem;
 }
+
 
 /* CATEGORY PAGE */
 .category-content > p {
@@ -713,6 +716,54 @@ textarea {
 .entry-title a {
   padding-top: 6rem;
 }
+
+/* SINGLE COURSE PAGE  */
+.ticket-selector-submit-btn {
+  background-color: transparent;
+  border: 2px solid var(--red);
+  color: var(--red);
+  padding: 1rem 0;
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+.ticket-selector-submit-btn:hover {
+  background-color: var(--red);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* class for the table = .tkt-slctr-tbl  */
+
+/* had to be more specific because of plugin styling  */
+.tkt-slctr-tbl-wrap-dv .tkt-slctr-tbl {
+  width: 100%;
+}
+
+.tkt-slctr-tbl th {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.tkt-slctr-tbl td {
+  padding: 1rem 0;
+}
+
+.download-iCal-frm .ee-ical-sbmt {
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-size: 2rem;
+}
+
+.ee-ical-sbmt:hover {
+  background-color: var(--blue);
+  color: #fff;
+  cursor: pointer;
+}
+
+
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */

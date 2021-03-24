@@ -53,7 +53,7 @@ get_header();
         cannot use the additional custom fields that i added. Let me know what you think -->
             <?php espresso_get_template_part('content', 'espresso_events-tickets'); ?>
 
-            <div>
+            <div class="course-info">
                 <div class="details">
                     <h2>Class Details</h2>
                     <!-- displays the different dates of the course  -->

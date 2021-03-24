@@ -70,6 +70,7 @@ get_header();
     //creates the query to fetch the categories
     //parameters display the categories sorted by name.
     $args = array(
+        'taxonomy' => 'espresso_event_categories',
         'orderby' => 'name',
         'order' => 'ASC',
         'parent' => 0
