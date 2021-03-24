@@ -133,8 +133,8 @@ a:active {
 .text-left {
   text-align: left;
 }
-.text-right{
- text-align: right;
+.text-right {
+  text-align: right;
 }
 
 /* three column grid - responsive to screen sizes */
@@ -355,6 +355,9 @@ nav {
   text-decoration: none;
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   text-transform: lowercase;
+}
+.sub-menu li a {
+  padding: 1rem;
 }
 
 .sub-menu li a:hover {
@@ -684,17 +687,17 @@ iframe {
   margin: 4rem 0;
   text-align: center;
 }
-.single-service ul{
+.single-service ul {
   padding-left: 1rem;
   color: #666;
 }
-.single-service ul li{
+.single-service ul li {
   padding: 0.5rem 0;
 }
-.form h2{
+.form h2 {
   text-align: left;
 }
-.memberships{
+.memberships {
   padding-top: 2rem;
 }
 
@@ -704,10 +707,10 @@ textarea {
 }
 
 /* SEARCH PAGE */
-.search p{
+.search p {
   padding: 0 1rem;
 }
-.entry-title a{
+.entry-title a {
   padding-top: 6rem;
 }
 /* **** MEDIA QUERIES ****  */
@@ -725,7 +728,7 @@ textarea {
   .banner-text > p {
     max-width: 50%;
   }
-  .banner-text{
+  .banner-text {
     padding-left: 2rem;
   }
 
@@ -783,14 +786,16 @@ textarea {
     line-height: 72px;
     color: var(--dark);
   }
-
+  .sub-menu {
+    background-color: #f3f8f6c9;
+  }
   .sub-menu {
     display: none;
     background-color: var(--dark);
     position: absolute;
     top: 5rem;
     z-index: 15;
-    width: 20rem;
+    width: 25rem;
     padding: 1rem 1rem 1rem 1rem;
     height: auto;
     overflow: visible;
@@ -960,14 +965,14 @@ textarea {
     align-items: flex-start;
     flex-direction: row;
   }
-  .single-service{
+  .single-service {
     max-width: 45%;
     text-align: left;
   }
-  .single-service h2{
+  .single-service h2 {
     text-align: left;
   }
-  .service-container .form{
+  .service-container .form {
     width: 45%;
   }
 } /* END OF MEDIA QUERY */
@@ -1022,13 +1027,13 @@ textarea {
     width: 625px;
     height: 450px;
   }
-  
+
   /* BOOK A ROOM PAGE  & EXAM PROCTORING & MEMBERSHIP */
   .service-container {
     margin: auto;
     justify-content: center;
   }
-  .single-service{
+  .single-service {
     padding: 2rem 4rem;
   }
 }
