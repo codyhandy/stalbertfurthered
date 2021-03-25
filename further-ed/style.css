@@ -514,7 +514,6 @@ footer .column:nth-of-type(2) ul li hr {
   color: var(--light-blue);
 }
 
-
 /* OTHER PAGE SPECIFIC STYLING BELOW HERE  */
 
 /* **** ABOUT PAGE ****  */
@@ -548,7 +547,6 @@ footer .column:nth-of-type(2) ul li hr {
   margin-bottom: 2rem;
 }
 
-
 /* CATEGORY PAGE */
 .category-content > p {
   padding: 0 1rem 1rem 1rem;
@@ -575,6 +573,12 @@ footer .column:nth-of-type(2) ul li hr {
   height: 30rem;
   width: 100%;
   background-position: center;
+}
+/* single course */
+.venue-container,
+.course-info,
+.event-tickets {
+  padding: 2rem;
 }
 
 /* overlay that appears when hovering a course card  */
@@ -762,7 +766,6 @@ textarea {
   color: #fff;
   cursor: pointer;
 }
-
 
 /* **** MEDIA QUERIES ****  */
 
@@ -1063,6 +1066,11 @@ textarea {
   /* COURSES  */
   .course-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .venue-container,
+  .course-info,
+  .event-tickets {
+    padding: 0;
   }
   /* this container hold the individual courses instead of the categories  */
   .course-container.single {

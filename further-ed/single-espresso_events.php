@@ -36,17 +36,23 @@ get_header();
 
 
         <div class="max-width">
-            <?php the_content(); ?>
+            <div class="venue-container"><?php the_content(); ?></div>
 
             <!-- *** BRAE *** this tag has some custom styling that looks decent, could mimic that styling for instructor as well? -->
-            <p><?php espresso_get_template_part('content', 'espresso_venues-location'); ?></p>
+            <div class="venue">
+                <h2>Venue</h2>
 
-            <?php if ($instructor = get_field('course-instructor')) : ?>
-                <p><strong>Instructor:</strong> <?php the_field('course-instructor'); ?></p>
-            <?php endif; ?>
-            <?php if ($courseNotification = get_field('course-notification')) : ?>
-                <p class="hi-lighted"><?php the_field('course-notification'); ?></p>
-            <?php endif; ?>
+            </div>
+            <div class="venue-container">
+                <p><?php espresso_get_template_part('content', 'espresso_venues-location'); ?></p>
+
+                <?php if ($instructor = get_field('course-instructor')) : ?>
+                    <p><strong>Instructor:</strong> <?php the_field('course-instructor'); ?></p>
+                <?php endif; ?>
+                <?php if ($courseNotification = get_field('course-notification')) : ?>
+                    <p class="hi-lighted"><?php the_field('course-notification'); ?></p>
+                <?php endif; ?>
+            </div>
 
             <!-- displays the ticket options -->
             <!-- ** BRAE ** this shows the tickets however the button does not link the other page as it should - not sure if we should figure this out or just style the base page? If we style base page we
@@ -60,12 +66,13 @@ get_header();
                     <?php espresso_list_of_event_dates(); ?>
 
                 </div>
-                <div class="venue">
-                    <h2>Venue</h2>
 
-                </div>
                 <!-- displays if the "hasWaitlist" has been selected when creating the event/course -->
                 <?php if ($hasWaitlist = get_field('has-waitlist')) : ?>
+                    <div class="venue">
+                        <h2>Waitlist</h2>
+
+                    </div>
                     <div class="waitlist">
                         <?php if ($waitlistText = get_field('waitlist-text')) : ?>
                             <p><?php the_field('waitlist-text'); ?></p>
