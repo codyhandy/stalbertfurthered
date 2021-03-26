@@ -383,6 +383,13 @@ nav {
 .banner {
   color: #fff;
 }
+.banner-text {
+  padding-left: 2rem;
+}
+.banner-text p, .banner-text h1{
+  padding-left: 0;
+}
+/* Took padding off banner-text h1 and p to align star literacy img and button correctly */
 
 /* might add this later to darken everything that is behind the mobile nav  */
 .nav-darken {
@@ -416,6 +423,7 @@ section.featured {
 
 .section2 {
   background-color: #dadada;
+  padding: 6rem 0;
 }
 .section2 p {
   text-align: center;
@@ -703,6 +711,7 @@ iframe {
 }
 .form h2 {
   text-align: left;
+  color: #96302b;
 }
 .memberships {
   padding-top: 2rem;
@@ -780,7 +789,7 @@ textarea {
     padding: 0;
   }
   .banner-text > p {
-    max-width: 50%;
+    max-width: 80%;
   }
   .banner-text {
     padding-left: 2rem;
@@ -880,6 +889,9 @@ textarea {
   /* HOMEPAGE */
   .section1 > div > * {
     width: 45%;
+  }
+  .section2{
+    padding: 6rem 2rem;
   }
   .featured {
     padding: 4rem 2rem;
@@ -1060,6 +1072,13 @@ textarea {
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 0rem;
     margin-left: 0rem;
+  }
+  /* HOME PAGE */
+  .section2 p{
+    padding: 0 10%;
+  }
+  .featured p{
+    padding: 0 10%;
   }
   /* ABOUT PAGE */
 
