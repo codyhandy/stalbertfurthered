@@ -86,7 +86,7 @@
                             $bannerLink_title = $bannerLink['title'];
                             $bannerLink_target = $bannerLink['target'] ? $bannerLink['target'] : '_self';
                         ?>
-                            <button class="btn inv"><a href="<?php echo esc_url($bannerLink_url); ?>" target="<?php echo esc_attr($bannerLink_target); ?>"><?php echo esc_html($bannerLink_title); ?></a></button>
+                            <button class="btn-red donate"><a href="<?php echo esc_url($bannerLink_url); ?>" target="<?php echo esc_attr($bannerLink_target); ?>"><?php echo esc_html($bannerLink_title); ?></a></button>
                         <?php endif; ?>
                         <?php if ('yes' == get_field('search')) : ?>
                             <?php get_search_form(); ?>

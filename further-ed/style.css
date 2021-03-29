@@ -178,6 +178,30 @@ a:active {
   margin: 1rem auto;
 }
 
+.donate{
+  background-color: #96302b;
+  border: 2px solid #96302b;
+  color: #fff;
+  width: 15rem;
+  margin: 1rem auto;
+}
+.donate a{
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.donate:hover{
+  background-color: transparent;
+  border: 2px solid var(--red);
+  color: #96302b;
+  width: 15rem;
+  margin: 1rem auto;
+}
+.donate a:hover{
+  color: #96302b;
+  padding: 1rem 0;
+}
+
 .btn a {
   padding: 1rem 2rem;
   color: var(--blue);
@@ -729,6 +753,9 @@ textarea {
 .entry-title a {
   padding-top: 6rem;
 }
+.entry-title a:hover{
+  color: #96302b;
+}
 
 /* SINGLE COURSE PAGE  */
 .ticket-selector-submit-btn {
@@ -895,6 +922,9 @@ textarea {
   }
   .featured {
     padding: 4rem 2rem;
+  }
+  section {
+    margin: 6rem 0;
   }
 
   .card {
@@ -1079,6 +1109,10 @@ textarea {
   }
   .featured p{
     padding: 0 10%;
+  }
+  section {
+    margin: 8rem 0;
+    padding: 6rem 0;
   }
   /* ABOUT PAGE */
 
