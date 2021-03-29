@@ -38,7 +38,6 @@ get_header();
         <div class="max-width">
             <div class="venue-container"><?php the_content(); ?></div>
 
-            <!-- *** BRAE *** this tag has some custom styling that looks decent, could mimic that styling for instructor as well? -->
             <div class="venue">
                 <h2>Venue</h2>
 
@@ -55,8 +54,6 @@ get_header();
             </div>
 
             <!-- displays the ticket options -->
-            <!-- ** BRAE ** this shows the tickets however the button does not link the other page as it should - not sure if we should figure this out or just style the base page? If we style base page we
-        cannot use the additional custom fields that i added. Let me know what you think -->
             <?php espresso_get_template_part('content', 'espresso_events-tickets'); ?>
 
             <div class="course-info">
