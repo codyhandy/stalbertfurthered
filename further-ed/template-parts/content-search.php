@@ -6,12 +6,12 @@
 * @since 1.0.0
 */
 ?>
-<article <?php post_class();?> id="post-<?php the_ID();?>" >
+<article class="text-left" <?php post_class();?> id="post-<?php the_ID();?>" >
 <!-- entry header -->
 <header>
 <!-- get the page title -->
  <?php the_title(
-sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+sprintf('<h2 class="entry-title text-left search-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 '</a></h2>'
 ); ?>
  <?php if ( 'post' == get_post_type() ) : ?>

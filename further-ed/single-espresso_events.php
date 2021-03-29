@@ -28,7 +28,6 @@ get_header();
         <div class="opacity">
             <div class="banner-text max-width">
                 <h1><?php the_title(); ?></h1>
-                <p><?php echo get_the_excerpt(); ?></p>
             </div>
         </div>
     </div>
@@ -38,48 +37,49 @@ get_header();
         <div class="max-width">
             <div class="venue-container"><?php the_content(); ?></div>
 
-            <div class="venue">
-                <h2>Venue</h2>
-
-            </div>
-            <div class="venue-container">
-                <p><?php espresso_get_template_part('content', 'espresso_venues-location'); ?></p>
-
-                <?php if ($instructor = get_field('course-instructor')) : ?>
-                    <p><strong>Instructor:</strong> <?php the_field('course-instructor'); ?></p>
-                <?php endif; ?>
-                <?php if ($courseNotification = get_field('course-notification')) : ?>
-                    <p class="hi-lighted"><?php the_field('course-notification'); ?></p>
-                <?php endif; ?>
-            </div>
-
             <!-- displays the ticket options -->
             <?php espresso_get_template_part('content', 'espresso_events-tickets'); ?>
 
-            <div class="course-info">
-                <div class="details">
-                    <h2>Class Details</h2>
-                    <!-- displays the different dates of the course  -->
-                    <?php espresso_list_of_event_dates(); ?>
-
+            <div class="flex">
+                <div class="venue-container">
+                    <h2>Venue</h2>
+                    <p><?php espresso_get_template_part('content', 'espresso_venues-location'); ?></p>
                 </div>
 
-                <!-- displays if the "hasWaitlist" has been selected when creating the event/course -->
-                <?php if ($hasWaitlist = get_field('has-waitlist')) : ?>
-                    <div class="venue">
-                        <h2>Waitlist</h2>
-
-                    </div>
-                    <div class="waitlist">
-                        <?php if ($waitlistText = get_field('waitlist-text')) : ?>
-                            <p><?php the_field('waitlist-text'); ?></p>
+                <div class="course-info">
+                    <div class="details">
+                        <h2>Class Details</h2>
+                        <?php if ($courseNotification = get_field('course-notification')) : ?>
+                            <p class="hi-lighted"><?php the_field('course-notification'); ?></p>
                         <?php endif; ?>
-                        <p>If class is sold out - Please email here to be placed on the waitlist.</p>
-                        <button class="btn"><a href="#">Apply for waitlist</a></button>
+                        <?php if ($instructor = get_field('course-instructor')) : ?>
+                            <p><strong>Instructor:</strong> <?php the_field('course-instructor'); ?></p>
+                        <?php endif; ?>
+                        
+                        <!-- displays the different dates of the course  -->
+                        <?php espresso_list_of_event_dates(); ?>
                     </div>
-                <?php endif; ?>
+
+                    
+                </div> <!-- end of the course information --> 
             </div>
-        </div>
+
+            <!-- displays if the "hasWaitlist" has been selected when creating the event/course -->
+            <?php if ($hasWaitlist = get_field('has-waitlist')) : ?>
+                <div class="venue">
+                    <h2>Waitlist</h2>
+                </div>
+
+                <div class="waitlist">
+                    <?php if ($waitlistText = get_field('waitlist-text')) : ?>
+                        <p><?php the_field('waitlist-text'); ?></p>
+                    <?php endif; ?>
+                    <p>If class is sold out - Please email here to be placed on the waitlist.</p>
+                    <button class="btn"><a href="#">Apply for waitlist</a></button>
+                </div>
+            <?php endif; ?>
+
+        </div> <!-- max-width wrapper -->
 
     </article>
 
