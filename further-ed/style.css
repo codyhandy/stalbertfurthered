@@ -243,7 +243,19 @@ a:active {
   flex: 1 1 0;
   /* added this to always make cards same dimensions */
 }
-
+.partner-container {
+  width: 75%;
+  margin: 0 auto;
+}
+.course.card.partner-image {
+  width: 15rem;
+  margin: auto;
+  border: none;
+}
+.course.card.partner-image:hover {
+  transition: 0.2s all ease-in-out;
+  border: 1px solid var(--dark);
+}
 /* search form styling */
 .search-bar {
   display: flex;
@@ -1099,7 +1111,7 @@ textarea {
     line-height: 72px;
     color: var(--dark);
   }
-  
+
   .sub-menu {
     background-color: #f3f8f6c9;
     width: 25rem;
