@@ -179,7 +179,7 @@
                                                                                 _e($headingPartners);
                                                                             } ?></h2>
         </div>
-        <div class="course-container max-width">
+        <div class="course-container partner-container max-width">
             <?php
 
             $partnerargs = array(
