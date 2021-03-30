@@ -62,7 +62,8 @@
             </div>
         </nav>
 
-        <?php if (is_page()) : ?>
+        <!-- only uses the base banner if the page is a page created in the wordpress editor -->
+        <?php if (is_page() && !is_page('Registration Checkout')) : ?>
             <div class="banner" style="background: url(<?php $banner = get_field('banner-image'); ?> <?php if ($banner) { _e($banner); } ?>) no-repeat 50% 50%; background-size: cover;">
                 <div class="opacity">
                     <div class="banner-text max-width">

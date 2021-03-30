@@ -9,7 +9,8 @@
 ?>
 <article <?php post_class();?> id="post-<?php the_ID();?>" >
 <!-- entry header -->
- <div class="banner" style="background: url(<?php echo z_taxonomy_image_url(  ); ?>) no-repeat 50% 50%; background-size: cover;">
+<!-- hardcoded banner in for now, going to see if there is a way around this  -->
+ <div class="banner" style="background: url( http://further-ed.web.dmitcapstone.ca/further-ed/wp-content/uploads/2021/03/stalbert-further-education-banner-scaled.jpg) no-repeat 50% 50%; background-size: cover;">
     <div class="opacity">
         <div class="banner-text max-width">
             <?php the_title( '<h1>', '</h1>' ); ?>
