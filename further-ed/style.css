@@ -1246,4 +1246,23 @@ textarea {
   #ee-single-page-checkout-dv {
     padding: 2rem 0 0 0;
   }
+
+  #scrollToTopBtn {
+    background-color: #46739794;
+    border: none;
+    border-radius: 50%;
+    color: var(--off-white);
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: bold;
+    margin: auto;
+    line-height: 100px;
+    width: 100px;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+  }
+  button:focus {
+    outline: 0;
+  }
 }
