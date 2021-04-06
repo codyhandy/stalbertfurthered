@@ -28,7 +28,5 @@
  <!-- other things you could put in here would be: pagination (more used for blog posts), custom posts, anything you need for site. -->
  </div>
  <footer class="entry-footer">
-<!--adds a link to edit your content -->
- <?php edit_post_link( __('Edit','themenamehere'), '<span class="edit-link">', '</span>' ); ?>
  </footer>
 </article>

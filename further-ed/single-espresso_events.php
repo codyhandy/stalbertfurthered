@@ -40,7 +40,7 @@ get_header();
             <!-- displays the ticket options -->
             <?php espresso_get_template_part('content', 'espresso_events-tickets'); ?>
 
-            <div class="flex">
+            <div class="details-flex">
                 <div class="venue-container">
                     <h2>Venue</h2>
                     <p><?php espresso_get_template_part('content', 'espresso_venues-location'); ?></p>
@@ -53,16 +53,15 @@ get_header();
                             <p class="hi-lighted"><?php the_field('course-notification'); ?></p>
                         <?php endif; ?>
                         <?php if ($instructor = get_field('course-instructor')) : ?>
-                            <p><strong>Instructor:</strong> <?php the_field('course-instructor'); ?></p>
+                            <h3>Instructor</h3>
+                            <p class="course-imp"><?php the_field('course-instructor'); ?></p> 
                         <?php endif; ?>
                         
                         <!-- displays the different dates of the course  -->
                         <?php espresso_list_of_event_dates(); ?>
                     </div>
-
-                    
                 </div> <!-- end of the course information --> 
-            </div>
+            </div> <!-- end of the course information section -->
 
             <!-- displays if the "hasWaitlist" has been selected when creating the event/course -->
             <?php if ($hasWaitlist = get_field('has-waitlist')) : ?>

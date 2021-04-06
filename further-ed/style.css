@@ -45,7 +45,6 @@ h3,
 h4,
 h5,
 p {
-  padding: 0 2rem;
   line-height: 3rem;
 }
 
@@ -663,6 +662,10 @@ footer .column:nth-of-type(2) ul li hr {
   justify-content: space-between;
 }
 
+.waitlist {
+  padding: 0 2rem;
+}
+
 .card.course {
   border: 1px solid #b7b7b7;
 }
@@ -800,7 +803,7 @@ textarea {
 }
 
 .tkt-slctr-tbl td {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .download-iCal-frm .ee-ical-sbmt {
@@ -816,18 +819,48 @@ textarea {
   cursor: pointer;
 }
 
+.course-imp {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+/* class for the registration form on checkout page  */
+.ee-reg-form-qstn-grp-dv input {
+  margin: 1rem 0 2rem 0;
+  padding: 1rem;
+  border: 2px solid var(--blue);
+  /* background-color: transparent; */
+}
+
+/* checkout submit button  */
+.spco-next-step-btn {
+  width: auto;
+  color: var(--red);
+  background-color: transparent;
+  border: 2px solid var(--red);
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+}
+
+.spco-next-step-btn:hover {
+  background-color: var(--red);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* checkout page content container  */
+#ee-single-page-checkout-dv {
+  padding: 2rem 2rem 0 2rem;
+}
+
+
+
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
 @media (min-width: 800px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  p {
-    padding: 0;
-  }
+  
   .banner-text > p {
     max-width: 80%;
   }
@@ -1090,8 +1123,22 @@ textarea {
     text-align: left;
   }
   .service-container .form {
-    width: 45%;
+    width: 48%;
   }
+
+
+  .details-flex {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .details-flex > * {
+    width: 50%;
+  }
+
 } /* END OF MEDIA QUERY */
 
 /* desktop version  */
@@ -1149,11 +1196,7 @@ textarea {
   .course-container {
     grid-template-columns: repeat(4, 1fr);
   }
-  .venue-container,
-  .course-info,
-  .event-tickets {
-    padding: 0;
-  }
+  
   /* this container hold the individual courses instead of the categories  */
   .course-container.single {
     grid-template-columns: repeat(3, 1fr);
@@ -1181,7 +1224,19 @@ textarea {
 
 /* desktop version  / when content hits the max-width */
 @media (min-width: 1300px) {
+  
   .course-container {
     padding: 0;
+  }
+
+  .waitlist,
+  .venue-container,
+  .course-info,
+  .event-tickets {
+    padding: 0;
+  }
+
+  #ee-single-page-checkout-dv {
+    padding: 2rem 0 0 0;
   }
 }
