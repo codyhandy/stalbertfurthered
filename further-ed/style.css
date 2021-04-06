@@ -730,6 +730,14 @@ iframe {
 .section-one-star p {
   padding-bottom: 3rem;
 }
+/* basic content styling */
+.basic-content {
+  margin: 0 auto;
+  padding: 2rem;
+}
+.basic-content p {
+  padding-top: 2rem;
+}
 
 /* BOOK A ROOM PAGE & EXAM PROCTORING & MEMBERSHIP */
 .service-container {
@@ -854,13 +862,10 @@ textarea {
   padding: 2rem 2rem 0 2rem;
 }
 
-
-
 /* **** MEDIA QUERIES ****  */
 
 /* tablet size  */
 @media (min-width: 800px) {
-  
   .banner-text > p {
     max-width: 80%;
   }
@@ -1126,7 +1131,6 @@ textarea {
     width: 48%;
   }
 
-
   .details-flex {
     /* display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1138,7 +1142,6 @@ textarea {
   .details-flex > * {
     width: 50%;
   }
-
 } /* END OF MEDIA QUERY */
 
 /* desktop version  */
@@ -1196,7 +1199,7 @@ textarea {
   .course-container {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   /* this container hold the individual courses instead of the categories  */
   .course-container.single {
     grid-template-columns: repeat(3, 1fr);
@@ -1212,6 +1215,11 @@ textarea {
     height: 450px;
   }
 
+  .basic-content {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+
   /* BOOK A ROOM PAGE  & EXAM PROCTORING & MEMBERSHIP */
   .service-container {
     margin: auto;
@@ -1224,7 +1232,6 @@ textarea {
 
 /* desktop version  / when content hits the max-width */
 @media (min-width: 1300px) {
-  
   .course-container {
     padding: 0;
   }

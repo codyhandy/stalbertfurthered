@@ -18,7 +18,7 @@
 
     </div>
     <div class="max-width">
-        <?php the_content(); ?>
+        <div class="basic-content"> <?php the_content(); ?></div>
         <div class="section-one-star">
             <?php
 
