@@ -625,6 +625,16 @@ footer .column:nth-of-type(2) ul li hr {
   padding: 2rem;
 }
 
+.venue-container h2,
+.course-info h2,
+.venue h2{
+  text-align: left;
+}
+
+.venue{
+  padding-left: 2rem;
+}
+
 /* overlay that appears when hovering a course card  */
 .card-bg .overlay {
   width: 100%;
@@ -1131,6 +1141,8 @@ textarea {
     width: 48%;
   }
 
+  /* CATEGORY PAGE */
+
   .details-flex {
     /* display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1141,6 +1153,10 @@ textarea {
 
   .details-flex > * {
     width: 50%;
+  }
+  .indv-courses h2 {
+    padding-left: 2rem;
+    text-align: left;
   }
 } /* END OF MEDIA QUERY */
 
@@ -1228,6 +1244,11 @@ textarea {
   .single-service {
     padding: 2rem 4rem;
   }
+
+  /* CATEGORY PAGE */
+  .indv-courses h2 {
+    padding-left: 0;
+  }
 }
 
 /* desktop version  / when content hits the max-width */
@@ -1239,7 +1260,7 @@ textarea {
   .waitlist,
   .venue-container,
   .course-info,
-  .event-tickets {
+  .event-tickets, .venue {
     padding: 0;
   }
 
