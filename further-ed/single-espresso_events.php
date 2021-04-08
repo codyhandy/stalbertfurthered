@@ -53,7 +53,7 @@ get_header();
                             <p class="hi-lighted"><?php the_field('course-notification'); ?></p>
                         <?php endif; ?>
                         <?php if ($instructor = get_field('course-instructor')) : ?>
-                            <h3>Instructor</h3>
+                            <h3><span class="heading-icon"><i class="fas fa-chalkboard-teacher"></i></span>Instructor</h3>
                             <p class="course-imp"><?php the_field('course-instructor'); ?></p> 
                         <?php endif; ?>
                         

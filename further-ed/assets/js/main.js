@@ -18,6 +18,8 @@ window.onload = function () {
   var scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  // stops button from appearing by default
+  scrollToTopBtn.style.display = 'none';
   var rootElement = document.documentElement;
 
   function scrollToTop() {
@@ -28,18 +30,17 @@ window.onload = function () {
     });
   }
   scrollToTopBtn.addEventListener("click", scrollToTop);
+  
 
-  // let scrollBtn = document.querySelector('.scroll-btn');
+  window.onscroll = function() {scrollFunction()};
 
-  // window.onscroll = function() {scrollFunction()};
-
-  // function scrollFunction () {
-  //     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-  //         scrollBtn.style.display = 'block';
-  //     } else {
-  //         scrollBtn.style.display = 'none';
-  //     }
-  // }
+  function scrollFunction () {
+      if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+          scrollToTopBtn.style.display = 'block';
+      } else {
+          scrollToTopBtn.style.display = 'none';
+      }
+  }
 
   // // scrolls to the top when the button is pressed
   // function topFunction() {
