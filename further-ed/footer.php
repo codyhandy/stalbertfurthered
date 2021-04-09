@@ -15,8 +15,6 @@
 
     <?php get_template_part('template-parts/sidebar', 'footer'); ?>
 
-    <button id="scrollToTopBtn"><i class="far fa-arrow-alt-circle-up"></i></button>
-
 
 </footer>
 </body>

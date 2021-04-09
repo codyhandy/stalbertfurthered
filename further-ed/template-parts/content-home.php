@@ -168,7 +168,7 @@
                 $link_title = $linkSection2['title'];
                 $link_url = $linkSection2['url'];
             ?>
-                <button class="btn-red donate"><a href="<?php print_r(esc_url($link_url)); ?>"><?php print_r(esc_html($link_title)); ?></a></button>
+                <button class="btn-red donate"><a href="<?php print_r(esc_url($link_url)); ?>"><?php print_r(esc_html($link_title)); ?>"</a></button>
             <?php endif; ?>
         </div>
     </section>
