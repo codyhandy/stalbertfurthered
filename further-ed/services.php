@@ -26,7 +26,7 @@ $args = array(
 $the_service_query = new WP_Query($args);
 ?>
 
-<section>
+<section class="zero">
     <div class="max-width">
         <h2><?php $headingServices = get_field('heading-services'); ?> <?php if ($headingServices) {
                                                                             _e($headingServices);

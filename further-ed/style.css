@@ -627,11 +627,11 @@ footer .column:nth-of-type(2) ul li hr {
 
 .venue-container h2,
 .course-info h2,
-.venue h2{
+.venue h2 {
   text-align: left;
 }
 
-.venue{
+.venue {
   padding-left: 2rem;
 }
 
@@ -1007,7 +1007,7 @@ textarea {
   }
 
   .card.services {
-    flex: 1 1 250px;
+    flex: 1 1 330px;
     margin-top: 4rem;
   }
 
@@ -1146,7 +1146,9 @@ textarea {
   .service-container .form {
     width: 48%;
   }
-
+  .zero {
+    margin: 0;
+  }
   /* CATEGORY PAGE */
 
   .details-flex {
@@ -1266,7 +1268,8 @@ textarea {
   .waitlist,
   .venue-container,
   .course-info,
-  .event-tickets, .venue {
+  .event-tickets,
+  .venue {
     padding: 0;
   }
 

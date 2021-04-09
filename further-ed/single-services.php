@@ -24,9 +24,19 @@ get_header();
                                                                                     _e($bannerHeading);
                                                                                 } ?></h1>
                     <p><?php $bannerText = get_field('main-subheading'); ?> <?php if ($bannerText) {
-                                                                                    _e($bannerText);
-                                                                                } ?></p>
+                                                                                _e($bannerText);
+                                                                            } ?></p>
+                    <?php
+                    $bannerLink = get_field('button');
+                    if ($bannerLink) :
+                        $bannerLink_url = $bannerLink['url'];
+                        $bannerLink_title = $bannerLink['title'];
+                        $bannerLink_target = $bannerLink['target'] ? $bannerLink['target'] : '_self';
+                    ?>
+                        <button class="btn-red donate"><a href="<?php echo esc_url($bannerLink_url); ?>" target="<?php echo esc_attr($bannerLink_target); ?>"><?php echo esc_html($bannerLink_title); ?></a></button>
+                    <?php endif; ?>
                 </div>
+
             </div>
         </div>
 
@@ -36,18 +46,18 @@ get_header();
                 <?php the_content(); ?>
             </div>
 
-            <div class="form">
-                <?php
 
-                $form = get_field('contact_form') ?>
+            <?php
 
-                <?php if ($form) :  ?>
+            $form = get_field('contact_form') ?>
 
+            <?php if ($form) :  ?>
+                <div class="form">
                     <div class="contact-us-form"><?php the_field('contact_form'); ?></div>
+                </div>
+            <?php endif; ?>
 
-                <?php endif; ?>
 
-            </div>
         </div>
 
 
