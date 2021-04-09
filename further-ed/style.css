@@ -627,11 +627,11 @@ footer .column:nth-of-type(2) ul li hr {
 
 .venue-container h2,
 .course-info h2,
-.venue h2{
+.venue h2 {
   text-align: left;
 }
 
-.venue{
+.venue {
   padding-left: 2rem;
 }
 
@@ -941,6 +941,9 @@ textarea {
     line-height: 72px;
     color: var(--dark);
   }
+  #menu-item-333:before {
+    right: 22px;
+  }
   .sub-menu {
     background-color: #f3f8f6c9;
   }
@@ -950,7 +953,7 @@ textarea {
     position: absolute;
     top: 5rem;
     z-index: 15;
-    width: 15rem;
+    width: 20rem;
     padding: 1rem 1rem 1rem 1rem;
     height: auto;
     overflow: visible;
@@ -1007,7 +1010,7 @@ textarea {
   }
 
   .card.services {
-    flex: 1 1 250px;
+    flex: 1 1 330px;
     margin-top: 4rem;
   }
 
@@ -1146,7 +1149,9 @@ textarea {
   .service-container .form {
     width: 48%;
   }
-
+  .zero {
+    margin: 0;
+  }
   /* CATEGORY PAGE */
 
   .details-flex {
@@ -1178,7 +1183,8 @@ textarea {
     border-right: none;
   }
 
-  .menu-item-has-children:before {
+  .menu-item-has-children:before,
+  #menu-item-333:before {
     right: -10px;
     line-height: 72px;
     color: var(--dark);
@@ -1266,7 +1272,8 @@ textarea {
   .waitlist,
   .venue-container,
   .course-info,
-  .event-tickets, .venue {
+  .event-tickets,
+  .venue {
     padding: 0;
   }
 
