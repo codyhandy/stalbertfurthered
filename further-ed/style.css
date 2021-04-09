@@ -941,6 +941,9 @@ textarea {
     line-height: 72px;
     color: var(--dark);
   }
+  #menu-item-333:before {
+    right: 22px;
+  }
   .sub-menu {
     background-color: #f3f8f6c9;
   }
@@ -950,7 +953,7 @@ textarea {
     position: absolute;
     top: 5rem;
     z-index: 15;
-    width: 15rem;
+    width: 20rem;
     padding: 1rem 1rem 1rem 1rem;
     height: auto;
     overflow: visible;
@@ -1180,7 +1183,8 @@ textarea {
     border-right: none;
   }
 
-  .menu-item-has-children:before {
+  .menu-item-has-children:before,
+  #menu-item-333:before {
     right: -10px;
     line-height: 72px;
     color: var(--dark);
