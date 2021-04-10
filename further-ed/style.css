@@ -184,6 +184,10 @@ a:active {
   width: 15rem;
   margin: 1rem auto;
 }
+
+.section2 .donate {
+  display: block;
+}
 .donate a {
   color: #fff;
   padding: 1rem 0;
