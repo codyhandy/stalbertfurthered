@@ -72,7 +72,7 @@
         ?>
 
         <!-- only uses the base banner if the page is a page created in the wordpress editor -->
-        <?php if (is_page() && $espresso_page == false) : ?>
+        <?php if ( is_page() && $espresso_page == false ) : ?>
             <div class="banner" style="background: url(<?php $banner = get_field('banner-image'); ?> <?php if ($banner) { _e($banner); } ?>) no-repeat 50% 50%; background-size: cover;">
                 <div class="opacity">
                     <div class="banner-text max-width">
@@ -100,6 +100,14 @@
 
                 </div>
             </div>
+            </div>
+        <?php elseif( is_page() ): ?>
+            <div class="banner" style="background: url( http://further-ed.web.dmitcapstone.ca/further-ed/wp-content/uploads/2021/03/stalbert-further-education-banner-scaled.jpg) no-repeat 50% 50%; background-size: cover;">
+                <div class="opacity">
+                    <div class="banner-text max-width">
+                        <?php the_title( '<h1>', '</h1>' ); ?>
+                    </div>
+                </div>
             </div>
         <?php endif; ?>
 

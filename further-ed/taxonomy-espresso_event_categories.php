@@ -57,13 +57,7 @@ get_header();
         <?php foreach($categories as $category) { ?>
             <h2><?php echo ($category->name) ?></h2>
             <!-- add the code to loop through the posts of the specific sub category -->
-            <?php 
-                // echo "slug = $category->slug <br>";
-                // echo "name = $category->name <br>";
-                // echo "id = $category->term_id <br>";
-                // echo "parentid = $category->parent <br>";
-                // echo "taxonomy = $category->taxonomy <br>";
-                // echo "post count = $category->count <br>";
+            <?php
                 $args1 = array(
                     'post_type' => 'espresso_events',
                     'order' => 'ASC',
