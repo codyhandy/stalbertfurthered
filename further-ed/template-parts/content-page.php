@@ -1,11 +1,12 @@
 <?php
+
 /***
-* Template part for displaying content in the page.php
-* @link https://developer.wordpress.org/theme/basics/template-hierarchy/
-*
-* @package further-ed
-* @since 1.0.0
-*/
+ * Template part for displaying content in the page.php
+ * @link https://developer.wordpress.org/theme/basics/template-hierarchy/
+ *
+ * @package further-ed
+ * @since 1.0.0
+ */
 ?>
 <article <?php post_class();?> id="post-<?php the_ID();?>" >
 
