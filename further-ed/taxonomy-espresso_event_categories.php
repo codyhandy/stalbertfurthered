@@ -58,10 +58,24 @@ get_header();
             <h2><?php echo ($category->name) ?></h2>
             <!-- add the code to loop through the posts of the specific sub category -->
             <?php 
+                // echo "slug = $category->slug <br>";
+                // echo "name = $category->name <br>";
+                // echo "id = $category->term_id <br>";
+                // echo "parentid = $category->parent <br>";
+                // echo "taxonomy = $category->taxonomy <br>";
+                // echo "post count = $category->count <br>";
                 $args1 = array(
                     'post_type' => 'espresso_events',
                     'order' => 'ASC',
-                    'taxonomy' => ($category->name) 
+
+                    // displays only posts that fall under the sub category
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'espresso_event_categories',
+                            'field' => 'slug',
+                            'terms'    => array( $category->slug )
+                        ),
+                    )
                 );
                 //new WP_Query object saved as the variable $the_query.
                 $the_event_query = new WP_Query( $args1 );
@@ -84,7 +98,6 @@ get_header();
                         <?php else: ?>
                             <button class="btn"><a href="<?php the_permalink(); ?>">Learn More</a></button>
                         <?php endif; ?>
-                        
                     </div>    
                 <?php endwhile; ?>
             </div>
