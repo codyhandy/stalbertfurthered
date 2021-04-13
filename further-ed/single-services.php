@@ -43,7 +43,7 @@ get_header();
         </div>
 
 
-        <div class="service-container max-width lg-flex">
+        <div class="service-container max-width lg-flex padding">
             <div class="entry-content single-service">
                 <?php the_content(); ?>
             </div>
@@ -54,7 +54,7 @@ get_header();
             $form = get_field('contact_form') ?>
 
             <?php if ($form) :  ?>
-                <div class="form">
+                <div class="form padding">
                     <div class="contact-us-form"><?php the_field('contact_form'); ?></div>
                 </div>
             <?php endif; ?>

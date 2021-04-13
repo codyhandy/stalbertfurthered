@@ -17,7 +17,7 @@
     <div class="star-entry-content max-width">
 
     </div>
-    <div class="max-width">
+    <div class="max-width padding">
         <div class="basic-content"> <?php the_content(); ?></div>
         <div class="section-one-star">
             <?php

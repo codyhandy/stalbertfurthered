@@ -442,6 +442,10 @@ section {
   padding: 4rem 0;
 }
 
+.padding {
+  padding: 2rem;
+}
+
 .section1 {
   text-align: center;
 }
@@ -586,7 +590,7 @@ footer .column:nth-of-type(2) ul li hr {
 }
 .about-entry-content {
   text-align: center;
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 2rem 4rem 2rem;
 }
 
 .staff-card-deck {
@@ -707,7 +711,7 @@ footer .column:nth-of-type(2) ul li hr {
 /* CONTACT PAGE  */
 .form {
   background-color: #cacaca;
-  padding: 2rem 0;
+  padding: 2rem;
   margin-bottom: 2rem;
 }
 .form p {
@@ -924,6 +928,10 @@ textarea {
 
   /* HELPER CLASSES  */
 
+  .padding {
+    padding: 0;
+  }
+
   /* used on a container where the contents are to be flexed when at larger screen sizes  */
   .lg-flex {
     display: flex;
@@ -1069,11 +1077,18 @@ textarea {
   .section1 h2 {
     text-align: left;
   }
-
+  .about-entry-content {
+    text-align: center;
+    padding: 4rem 0 4rem 0;
+  }
   /* services styling */
   .icon {
     color: #2b21297a;
     margin: 0 auto;
+  }
+
+  .form {
+    padding: 2rem 0;
   }
 
   /* FOOTER  */
@@ -1324,6 +1339,10 @@ textarea {
   .event-tickets,
   .venue {
     padding: 0;
+  }
+
+  .venue-container {
+    padding: 2rem 0;
   }
 
   #ee-single-page-checkout-dv {

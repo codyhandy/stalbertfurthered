@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <section class="featured about">
+    <section class="featured about padding">
         <div class="text-container max-width">
             <h2><?php $headingAbout = get_field('heading-about'); ?> <?php if ($headingAbout) {
                                                                             _e($headingAbout);
@@ -209,7 +209,7 @@
     </section>
 
     <section class="section2">
-        <div class="text-container max-width">
+        <div class="text-container max-width padding">
             <h2><?php $headingSection2 = get_field('heading-section2'); ?> <?php if ($headingSection2) {
                                                                                 _e($headingSection2);
                                                                             } ?></h2>
