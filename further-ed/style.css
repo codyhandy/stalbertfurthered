@@ -700,6 +700,10 @@ footer .column:nth-of-type(2) ul li hr {
   border: 1px solid #b7b7b7;
 }
 
+.card.course button {
+  margin-top: 2rem;
+}
+
 .waitlist p:last-of-type {
   margin-top: 2rem;
 }

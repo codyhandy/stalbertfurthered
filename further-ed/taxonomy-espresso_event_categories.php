@@ -84,6 +84,12 @@ get_header();
                         <!-- checks if the course if from a third party, if it is displays call/email info instead of learn more  -->
                         <?php if($thirdParty = get_field( 'is-third-party' )): ?>
                             <div>
+                                <?php if($address = get_field( 'address' )): ?>
+                                    <p><strong>Address:</strong> <?php the_field( 'address' ); ?></p>
+                                <?php endif; ?>
+                                <?php if($phone = get_field( 'telephone' )): ?>
+                                    <p><strong>Phone:</strong> <?php the_field( 'telephone' ); ?></p>
+                                <?php endif; ?>
                                 <?php if($url = get_field( 'url' )): ?>
                                     <button class="btn"><a href="<?php the_field( 'url' ); ?>">Visit Site</a></button>
                                 <?php endif; ?>
