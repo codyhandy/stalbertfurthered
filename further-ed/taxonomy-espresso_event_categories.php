@@ -88,7 +88,7 @@ get_header();
                                     <p><strong>Address:</strong> <?php the_field( 'address' ); ?></p>
                                 <?php endif; ?>
                                 <?php if($phone = get_field( 'telephone' )): ?>
-                                    <p><strong>Phone:</strong> <?php the_field( 'telephone' ); ?></p>
+                                    <button class="btn"><a href="tel:<?php the_field( 'telephone' ); ?>">Call</a></button>
                                 <?php endif; ?>
                                 <?php if($url = get_field( 'url' )): ?>
                                     <button class="btn"><a href="<?php the_field( 'url' ); ?>">Visit Site</a></button>
